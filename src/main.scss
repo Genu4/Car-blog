@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+body {
+    background: url('./wall_2.jpg');
+    background-repeat: repeat-y;
+    height: 2000px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 1210px;
+        padding: 0 20px;
+        margin: 0 auto;
+        background: #111111;
+    }
+
+    .mobile-header {
+        display: none; 
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        max-width: 726px;
+        margin: 0 auto;
+        background: #111111;
+    }
+
+    .header {
+        display: none;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        background: #111111;
+    }
+}
