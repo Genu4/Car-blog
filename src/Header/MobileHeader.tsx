@@ -7,6 +7,7 @@ const MobileHeader = (props: Props) => {
                     <button className="nav-button-mobile">
                         <span className="nav-button-mobile-icon"></span>
                     </button>
+
                     <div className="mobile-logo"></div>
                     <div className="mobile-header-search">
                         <div className="mobile-search-field-block">

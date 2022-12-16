@@ -1,6 +1,9 @@
 import './Header.scss'
-import MobileHeader from './MobileHeader'
 import './MobileHeader.scss'
+import './MobileMenu.scss'
+import MobileHeader from './MobileHeader'
+import MobileMenu from './MobileMenu'
+
 
 const Header = () => {
     return (
