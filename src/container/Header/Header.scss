@@ -5,12 +5,9 @@
         align-items: center;
         justify-content: space-between;
 
-        .header-logo {
+        .header-logo > img {
             width: 150px;
             height: 55px;
-            background-image: url('./images/carblog.png');
-            background-size: contain;
-            background-repeat: no-repeat;
         }
 
         .header-nav-list {
@@ -36,7 +33,6 @@
             transition: 0.3s;
         }
 
-
         .header-nav-list-item.has-child .header-nav-list-link:after {
             font-family: FontAwesome;
             content: '\f107';
@@ -45,8 +41,6 @@
             font-size: 13px;
             font-weight: normal;
         }
-
-        
 
         // sub-menu
 
@@ -79,28 +73,29 @@
             margin: 0 auto 20px;
             width: 210px;
             height: 140px;
-            background-image: url('../images/10.jpg');
+            background-image: url('../../assets/10.jpg');
+
             background-size: cover;
         }
         .sub-menu-block-car-deals-img-2 {
             margin: 0 auto 20px;
             width: 210px;
             height: 140px;
-            background-image: url('../images/13.jpg');
+            background-image: url('../../assets/13.jpg');
             background-size: cover;
         }
         .sub-menu-block-car-deals-img-3 {
             margin: 0 auto 20px;
             width: 210px;
             height: 140px;
-            background-image: url('../images/14.jpg');
+            background-image: url('../../assets/14.jpg');
             background-size: cover;
         }
         .sub-menu-block-car-deals-img-4 {
             margin: 0 auto 20px;
             width: 210px;
             height: 140px;
-            background-image: url('../images/17.jpg');
+            background-image: url('../../assets/17.jpg');
             background-size: cover;
         }
 
@@ -108,7 +103,7 @@
             margin: 0 auto 20px;
             width: 210px;
             height: 140px;
-            background-image: url('../images/15.jpg');
+            background-image: url('../../assets/15.jpg');
             background-size: cover;
         }
 
@@ -116,21 +111,21 @@
             margin: 0 auto 20px;
             width: 210px;
             height: 140px;
-            background-image: url('../images/5.jpg');
+            background-image: url('../../assets/5.jpg');
             background-size: cover;
         }
         .sub-menu-block-news-img-3 {
             margin: 0 auto 20px;
             width: 210px;
             height: 140px;
-            background-image: url('../images/6.jpg');
+            background-image: url('../../assets/6.jpg');
             background-size: cover;
         }
         .sub-menu-block-news-img-4 {
             margin: 0 auto 20px;
             width: 210px;
             height: 140px;
-            background-image: url('../images/8.jpg');
+            background-image: url('../../assets/8.jpg');
             background-size: cover;
         }
 
@@ -138,28 +133,28 @@
             margin: 0 auto 20px;
             width: 210px;
             height: 140px;
-            background-image: url('../images/4.jpg');
+            background-image: url('../../assets/4.jpg');
             background-size: cover;
         }
         .sub-menu-block-reviews-img-2 {
             margin: 0 auto 20px;
             width: 210px;
             height: 140px;
-            background-image: url('../images/12.jpg');
+            background-image: url('../../assets/12.jpg');
             background-size: cover;
         }
         .sub-menu-block-reviews-img-3 {
             margin: 0 auto 20px;
             width: 210px;
             height: 140px;
-            background-image: url('../images/6.jpg');
+            background-image: url('../../assets/6.jpg');
             background-size: cover;
         }
         .sub-menu-block-reviews-img-4 {
             margin: 0 auto 20px;
             width: 210px;
             height: 140px;
-            background-image: url('../images/8.jpg');
+            background-image: url('../../assets/8.jpg');
             background-size: cover;
         }
 
@@ -210,6 +205,8 @@
             width: 150px;
             background-color: #111111;
             border: none;
+            outline: none;
+            color: #f57f17;
         }
 
         .search-field::placeholder {
@@ -225,5 +222,3 @@
         }
     }
 }
-
-

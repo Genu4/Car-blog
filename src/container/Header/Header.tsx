@@ -1,8 +1,8 @@
-import './Header.scss'
-import './MobileHeader.scss'
-import './MobileMenu.scss'
+import MobileMenu from 'components/MobileMenu/MobileMenu'
 import MobileHeader from './MobileHeader'
-import MobileMenu from './MobileMenu'
+import logo from 'assets/carblog_logo.png'
+import './Header.scss'
+
 
 
 const Header = () => {
@@ -10,7 +10,9 @@ const Header = () => {
         <header>
             <div className="container">
                 <div className="header">
-                    <div className="header-logo"></div>
+                    <div className="header-logo">
+                        <img src={logo} alt="" />
+                    </div>
                     <nav className="header-nav">
                         <ul className="header-nav-list">
                             <li className="header-nav-list-item">
@@ -359,6 +361,7 @@ const Header = () => {
                     </div>
                 </div>
                 <MobileHeader />
+                <MobileMenu />
             </div>
         </header>
     )
