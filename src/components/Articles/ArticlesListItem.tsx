@@ -2,7 +2,10 @@ import { Card, CardContent } from '@mui/material'
 import './ArticlesListItem.scss'
 
 type Props = {
+    category: string
     title: string
+    author: string
+    summary: string
     
 }
 const ArticlesListItem = (props: Props) => {
@@ -11,7 +14,7 @@ const ArticlesListItem = (props: Props) => {
             <CardContent>
                 <div className="article-card-category-block">
                     <a href="#" className="article-card-category">
-                        Car Deals
+                        {props.category}
                     </a>
                 </div>
 
@@ -21,11 +24,10 @@ const ArticlesListItem = (props: Props) => {
                     </a>
                 </h2>
                 <div className="article-autor-date">
-                    by Gen January 23, 2019
+                    {props.author}
                 </div>
                 <p className="article-short-content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nisi, omnis et! Officiis dignissimos a accusantium?
+                    {props.summary}
                 </p>
                 <div className="read-more-btn">
                     <a className="read-more-btn-link" href="#">
