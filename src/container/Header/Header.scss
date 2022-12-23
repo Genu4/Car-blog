@@ -1,4 +1,7 @@
 @media (min-width: 992px) {
+    header {
+        background-color: #111111;
+    }
     .header {
         height: 80px;
         display: flex;
@@ -206,7 +209,6 @@
             background-color: #111111;
             border: none;
             outline: none;
-            color: #f57f17;
         }
 
         .search-field::placeholder {

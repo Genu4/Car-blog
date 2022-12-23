@@ -1,9 +1,8 @@
-import MobileMenu from 'components/MobileMenu/MobileMenu'
-import MobileHeader from './MobileHeader'
+
+import MobileHeader2 from './MobileHeader2'
+
 import logo from 'assets/carblog_logo.png'
 import './Header.scss'
-
-
 
 const Header = () => {
     return (
@@ -360,8 +359,10 @@ const Header = () => {
                         <div className="header-search-button"></div>
                     </div>
                 </div>
-                <MobileHeader />
-                <MobileMenu />
+                {/* <MobileHeader /> */}
+                <MobileHeader2 />
+                {/* <MobileMenu /> */}
+                {/* <MobileMenu2 /> */}
             </div>
         </header>
     )

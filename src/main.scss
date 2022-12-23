@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: url('assets/wall_2.jpg');
     background-repeat: repeat-y;
@@ -17,7 +21,7 @@ body {
     }
 
     .mobile-header {
-        display: none; 
+        display: none;
     }
 }
 
@@ -25,14 +29,13 @@ body {
     .container {
         max-width: 726px;
         margin: 0 auto;
-        padding: 0;
+        padding: 0 10px;
         background: #111111;
     }
 
     .header {
         display: none;
     }
-
 }
 
 @media (max-width: 767px) {

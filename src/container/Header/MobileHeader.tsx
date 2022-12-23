@@ -1,6 +1,7 @@
 import './MobileHeader.scss'
 import mobilelogo from 'D:/Rabota/IT/FrontEnd/React/blog-project/src/assets/carblog_logo.png'
 
+
 type Props = {}
 const MobileHeader = (props: Props) => {
     return (

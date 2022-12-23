@@ -34,6 +34,10 @@
         
     }
 
+    .mobile-nav-list-link:hover {
+        color: #f57f17;
+    }
+
     .mobile-nav-list-item+.mobile-nav-list-item {
         border-top: 1px solid #f57f17;
     }
