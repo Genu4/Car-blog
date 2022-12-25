@@ -7,6 +7,7 @@ type ArticlesProps = {
     title: string
     author: string
     summary: string
+    image: string
 }
 
 type Props = {}
@@ -14,13 +15,21 @@ const ArticlesList = (props: Props) => {
     return (
         <>
             <Grid container direction="row" justifyContent="center" spacing={4}>
-                {articlesArray.map((article: ArticlesProps) => (
+                {articlesArray.map(
+                    ({
+                    category,
+                    title,
+                    author,
+                    summary,
+                    image
+                }: ArticlesProps) => (
                     <Grid item xs={12} sm={6} lg={4}>
                         <ArticlesListItem
-                            category={article.category}
-                            title={article.title}
-                            author={article.author}
-                            summary={article.summary}
+                            category={category}
+                            title={title}
+                            author={author}
+                            summary={summary}
+                            image={image}
                         />
                     </Grid>
                 ))}
