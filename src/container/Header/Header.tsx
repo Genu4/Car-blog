@@ -1,7 +1,7 @@
 
 import MobileHeader2 from './MobileHeader2'
 
-import logo from 'assets/carblog_logo.png'
+import logo from './images/carblog_logo.png'
 import './Header.scss'
 
 const Header = () => {
