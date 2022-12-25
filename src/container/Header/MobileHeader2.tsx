@@ -1,5 +1,5 @@
 import './MobileHeader2.scss'
-import mobilelogo from 'D:/Rabota/IT/FrontEnd/React/blog-project/src/assets/carblog_logo.png'
+import mobilelogo from './images/carbloglogo.png'
 import * as React from 'react'
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
