@@ -1,7 +1,5 @@
-
 import MobileHeader2 from './MobileHeader2'
-
-import logo from './images/carblog_logo.png'
+import logo from 'D:/Rabota/IT/FrontEnd/React/blog-project/src/assets/carblog_logo.png'
 import './Header.scss'
 
 const Header = () => {
