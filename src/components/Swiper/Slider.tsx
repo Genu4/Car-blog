@@ -11,6 +11,9 @@ import 'swiper/css/scrollbar'
 import 'swiper/css/autoplay'
 import 'swiper/css/effect-flip'
 
+
+import slide10 from 'assets/15.jpg'
+
 const Slider = () => {
     return (
         <>
@@ -127,6 +130,7 @@ const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="swiper-slide-10">
+                        <img className='slide-img' src={slide10} alt="auto" />
                         <div className="slide-text">
                             <p>
                                 "Lamborghini is refinement, luxury and

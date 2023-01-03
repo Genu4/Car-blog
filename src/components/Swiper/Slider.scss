@@ -40,11 +40,17 @@
     .swiper-slide-9 {
         background-image: url('../../assets/14.jpg');
     }
-    .swiper-slide-10 {
-        background-image: url('../../assets/15.jpg');
-    }
+    // .swiper-slide-10 {
+    //     background-image: url('../../assets/15.jpg');
+    // }
+
+.slide-img {
+    position: relative;
+}
+
 
     .slide-text {
+        position: absolute;
         margin-bottom: 20px;
         margin-left: 20px;
         padding: 10px;
@@ -59,6 +65,7 @@
     .swiper-button-prev:after,
     .swiper-rtl .swiper-button-next:after {
         color: #f57f17;
+        font-size: 22px;
     }
 
     .swiper-scrollbar {
@@ -67,5 +74,12 @@
     }
     .swiper-scrollbar-drag {
         background: rgba(245, 127, 23, 0.5);
+    }
+}
+
+@media (max-width: 767px) {
+    .slider {
+        max-width: calc(100% - 40px);
+        height: 100%;
     }
 }
