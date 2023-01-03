@@ -87,11 +87,24 @@
     }
 
     .article-card-socials-block {
-        width: 125px;
+        width: 130px;
         margin: 0 auto;
         display: flex;
         justify-content: space-around;
     }
+
+    .article-card-likes,
+    .article-card-facebook,
+    .article-card-twitter,
+    .article-card-pinterest,
+    .article-card-email {
+        background-color: #111111;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        width: fit-content;
+    }
+
 
     .article-card-likes::before {
         content: '\f08a';

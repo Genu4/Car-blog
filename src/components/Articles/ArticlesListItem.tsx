@@ -41,11 +41,11 @@ const ArticlesListItem = ({
                 </div>
                 <div className="article-card-socials">
                     <div className="article-card-socials-block">
-                        <a href="/some/valid/uri"><span className="article-card-likes"></span></a>
-                        <a href="/some/valid/uri"><span className="article-card-facebook"></span></a>
-                        <a href="/some/valid/uri"><span className="article-card-twitter"></span></a>
-                        <a href="/some/valid/uri"><span className="article-card-pinterest"></span></a>
-                        <a href="/some/valid/uri"><span className="article-card-email"></span></a>
+                        <button className="article-card-likes"></button>
+                        <a href="/"><button className="article-card-facebook"></button></a>
+                        <a href="/"><button className="article-card-twitter"></button></a>
+                        <a href="/"><button className="article-card-pinterest"></button></a>
+                        <a href="/"><button className="article-card-email"></button></a>
                     </div>
                 </div>
             </CardContent>

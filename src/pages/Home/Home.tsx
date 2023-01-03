@@ -1,9 +1,13 @@
-import ArticlesList from "components/Articles/ArticlesList"
+import ArticlesList from 'components/Articles/ArticlesList'
+import Slider from 'components/Swiper/Slider'
 
 type Props = {}
 const Home = (props: Props) => {
-  return (
-    <ArticlesList />
-  )
+    return (
+        <>
+            <Slider />
+            <ArticlesList />
+        </>
+    )
 }
 export default Home
