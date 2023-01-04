@@ -45,6 +45,7 @@ const Slider = () => {
                                 idiot, but the guy who invented the other three
                                 was a genius."
                             </p>
+                            <div className='line'></div>
                             <p>Sid Caesar</p>
                         </div>
                     </div>
@@ -57,6 +58,7 @@ const Slider = () => {
                                 "The greatest danger on the roads is a car that
                                 goes faster than its driver can think."
                             </p>
+                            <div className='line'></div>
                             <p>Robert Lembke</p>
                         </div>
                     </div>
@@ -70,6 +72,7 @@ const Slider = () => {
                                 and you should be an integral part of it. This
                                 is the only way to become one of a kind."
                             </p>
+                            <div className='line'></div>
                             <p>Ayrton Senna</p>
                         </div>
                     </div>
@@ -82,6 +85,7 @@ const Slider = () => {
                                 "Of all the creations of human hands, the car is
                                 most similar to a living being."
                             </p>
+                            <div className='line'></div>
                             <p>William Lyons</p>
                         </div>
                     </div>
@@ -94,6 +98,7 @@ const Slider = () => {
                                 "Aerodynamics for those who do not know how to
                                 make engines."
                             </p>
+                            <div className='line'></div>
                             <p>Enzo Ferrari</p>
                         </div>
                     </div>
@@ -106,6 +111,7 @@ const Slider = () => {
                                 "Straight roads are for fast cars and curves are
                                 for fast drivers."
                             </p>
+                            <div className='line'></div>
                             <p>Colin McRae</p>
                         </div>
                     </div>
@@ -116,8 +122,9 @@ const Slider = () => {
                         <div className="slide-text">
                             <p>
                                 "Car racing began immediately after the second
-                                car was born."
+                                car was bild."
                             </p>
+                            <div className='line'></div>
                             <p>Henry Ford</p>
                         </div>
                     </div>
@@ -130,6 +137,7 @@ const Slider = () => {
                                 "I couldn't find the sports car of my dreams, so
                                 I made it myself."
                             </p>
+                            <div className='line'></div>
                             <p>Ferdinand Porsche</p>
                         </div>
                     </div>
@@ -142,6 +150,7 @@ const Slider = () => {
                                 "When I was asked what my favorite car was, I
                                 always answered - the next"
                             </p>
+                            <div className='line'></div>
                             <p>Carroll Shelby</p>
                         </div>
                     </div>
@@ -154,6 +163,7 @@ const Slider = () => {
                                 "Lamborghini is refinement, luxury and
                                 perfection."
                             </p>
+                            <div className='line'></div>
                             <p>Ferruccio Lamborghini</p>
                         </div>
                     </div>
