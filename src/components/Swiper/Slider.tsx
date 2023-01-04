@@ -12,7 +12,16 @@ import 'swiper/css/autoplay'
 import 'swiper/css/effect-flip'
 
 
-import slide10 from 'assets/15.jpg'
+import slide1 from 'assets/5.jpg'
+import slide2 from 'assets/6.jpg'
+import slide3 from 'assets/9.jpg'
+import slide4 from 'assets/10.jpg'
+import slide5 from 'assets/11.jpg'
+import slide6 from 'assets/12.jpg'
+import slide7 from 'assets/13.jpg'
+import slide8 from 'assets/14.jpg'
+import slide9 from 'assets/15.jpg'
+import slide10 from 'assets/16.jpg'
 
 const Slider = () => {
     return (
@@ -29,6 +38,7 @@ const Slider = () => {
             >
                 <SwiperSlide>
                     <div className="swiper-slide-1">
+                        <img className='slide-img' src={slide1} alt="auto" />
                         <div className="slide-text">
                             <p>
                                 "The guy who invented the first wheel was an
@@ -41,6 +51,7 @@ const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="swiper-slide-2">
+                        <img className='slide-img' src={slide2} alt="auto" />
                         <div className="slide-text">
                             <p>
                                 "The greatest danger on the roads is a car that
@@ -52,6 +63,7 @@ const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="swiper-slide-3">
+                        <img className='slide-img' src={slide3} alt="auto" />
                         <div className="slide-text">
                             <p>
                                 "The car should be a part of you, your flesh,
@@ -64,6 +76,7 @@ const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="swiper-slide-4">
+                        <img className='slide-img' src={slide4} alt="auto" />
                         <div className="slide-text">
                             <p>
                                 "Of all the creations of human hands, the car is
@@ -75,6 +88,7 @@ const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="swiper-slide-5">
+                        <img className='slide-img' src={slide5} alt="auto" />
                         <div className="slide-text">
                             <p>
                                 "Aerodynamics for those who do not know how to
@@ -86,6 +100,7 @@ const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="swiper-slide-6">
+                        <img className='slide-img' src={slide6} alt="auto" />
                         <div className="slide-text">
                             <p>
                                 "Straight roads are for fast cars and curves are
@@ -97,6 +112,7 @@ const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="swiper-slide-7">
+                        <img className='slide-img' src={slide7} alt="auto" />
                         <div className="slide-text">
                             <p>
                                 "Car racing began immediately after the second
@@ -108,6 +124,7 @@ const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="swiper-slide-8">
+                        <img className='slide-img' src={slide8} alt="auto" />
                         <div className="slide-text">
                             <p>
                                 "I couldn't find the sports car of my dreams, so
@@ -119,6 +136,7 @@ const Slider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="swiper-slide-9">
+                        <img className='slide-img' src={slide9} alt="auto" />
                         <div className="slide-text">
                             <p>
                                 "When I was asked what my favorite car was, I
