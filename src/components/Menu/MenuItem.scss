@@ -1,0 +1,26 @@
+.header-nav-list-link {
+    display: inline-block;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 80px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.header-nav-list-link-active {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 80px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    color: #f57f17;
+}
+
+.header-nav-list-link:hover {
+    color: #f57f17;
+    transition: 0.3s;
+}
