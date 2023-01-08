@@ -20,6 +20,20 @@
         content: '\f106';
     }
 
+    .header-nav-list-item.has-child .header-nav-list-link-active:after {
+        font-family: FontAwesome;
+        content: '\f107';
+        margin-left: 5px;
+        color: inherit;
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+    .header-nav-list-item.has-child:hover .header-nav-list-link-active:after {
+        font-family: FontAwesome;
+        content: '\f106';
+    }
+
     // sub-menu
 
     .sub-menu {
