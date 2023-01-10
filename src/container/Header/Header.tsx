@@ -1,4 +1,4 @@
-import MobileHeader2 from './MobileHeader2'
+import MobileHeader2 from './MobileHeader'
 import logo from './images/carbloglogo.png'
 import './Header.scss'
 import Menu from 'components/Menu/Menu'

@@ -1,14 +1,11 @@
-import './MobileHeader2.scss'
+import './MobileHeader.scss'
 import mobilelogo from './images/carbloglogo.png'
 import * as React from 'react'
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
 import Button from '@mui/material/Button'
 import List from '@mui/material/List'
-import Divider from '@mui/material/Divider'
-import ListItem from '@mui/material/ListItem'
-import ListItemButton from '@mui/material/ListItemButton'
-import ListItemText from '@mui/material/ListItemText'
+import MenuItem from 'components/Menu/MenuItem'
 
 type Anchor = 'left'
 
@@ -59,39 +56,32 @@ const MobileHeader = (props: Props) => {
                 <div className="line"></div>
                 <ul className="mobile-nav-list">
                     <li className="mobile-nav-list-item">
-                        <a className="mobile-nav-list-link" href="">
-                            HOME
-                        </a>
+                        <MenuItem to="/">Home</MenuItem>
+                        
                     </li>
                     <li className="mobile-nav-list-item">
-                        <a className="mobile-nav-list-link" href="">
-                            CAR DEALS
-                        </a>
+                        <MenuItem to="/car-deals">Car Deals</MenuItem>
+                        
                     </li>
                     <li className="mobile-nav-list-item">
-                        <a className="mobile-nav-list-link" href="">
-                            NEWS
-                        </a>
+                        <MenuItem to="/news">News</MenuItem>
+                        
                     </li>
                     <li className="mobile-nav-list-item">
-                        <a className="mobile-nav-list-link" href="">
-                            REVIEWS
-                        </a>
+                        <MenuItem to="/reviews">Reviews</MenuItem>
+                        
                     </li>
                     <li className="mobile-nav-list-item">
-                        <a className="mobile-nav-list-link" href="">
-                            FAVOURITES
-                        </a>
+                        <MenuItem to="/favorites">Favorites</MenuItem>
+                        
                     </li>
                     <li className="mobile-nav-list-item">
-                        <a className="mobile-nav-list-link" href="">
-                            ABOUT
-                        </a>
+                        <MenuItem to="/about">About</MenuItem>
+                        
                     </li>
                     <li className="mobile-nav-list-item">
-                        <a className="mobile-nav-list-link" href="">
-                            CONTACTS
-                        </a>
+                        <MenuItem to="/contacts">Contacts</MenuItem>
+                        
                     </li>
                 </ul>
             </List>

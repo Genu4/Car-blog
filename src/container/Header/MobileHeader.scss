@@ -152,14 +152,9 @@
         border-bottom: none;
         padding: 0 17px;
     }
-    .mobile-nav-list-link {
-        display: block;
-        padding: 13px 0;
-        font-family: 'Orbitron', sans-serif;
-        font-size: 13px;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #313131;
+
+    .mobile-nav-list-item {
+        height: 30px;
     }
 
     .mobile-nav-list-item + .mobile-nav-list-item {
@@ -171,13 +166,14 @@
     }
 
     .close-menu-btn-block {
+        margin-top: 10px;
+        margin-left: 25px;
         width: 100%;
         display: flex;
         justify-content: flex-end;
     }
 
     .close-menu-btn {
-        width: 18px !important;
         color: #f57f17;
     }
 
