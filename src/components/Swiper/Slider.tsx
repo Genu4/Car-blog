@@ -1,6 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper'
+import { EffectCreative, Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper'
 import CssBaseline from '@mui/material/CssBaseline'
 
 // Import Swiper styles
@@ -29,11 +29,20 @@ const Slider = () => {
             <CssBaseline />
             <Swiper
                 className="slider"
-                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                modules={[EffectCreative, Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                 autoplay={{ delay: 5000, disableOnInteraction: false }}
-                spaceBetween={50}
+                spaceBetween={10}
                 slidesPerView={1}
-                navigation
+                creativeEffect={{
+                    prev: {
+                      shadow: true,
+                      translate: [0, 0, -400],
+                    },
+                    next: {
+                      translate: ["100%", 0, 0],
+                    },
+                  }}
+                navigation={true}
                 scrollbar={{ draggable: true }}
             >
                 <SwiperSlide>
