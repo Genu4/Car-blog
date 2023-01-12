@@ -5,6 +5,9 @@ const Footer = () => {
         <div className="container">
             <div className="footer">
                 <div className="footer-socials">
+                    <h4 className="footer-socials-header">
+                        you can contact us
+                    </h4>
                     <div className="footer-socials-part">
                         <a className="socials-link" href="/">
                             <div className="footer-socials-logo-facebook"></div>
@@ -34,7 +37,24 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-                <div className="subscribe-newsletter"></div>
+                <div className="subscribe-newsletter">
+                    <h4 className="subscribe-newsletter-header">
+                        SUBSCRIBE NEWSLETTER
+                    </h4>
+                    <p className="subscribe-newsletter-description">
+                        Subscribe our Newsletter for new car update. Let's stay
+                        updated!
+                    </p>
+                    <div className='subscribe-input-field-block'>
+                        <input className='subscribe-input-field' type="text" placeholder='Name...'/>
+                    </div>
+                    <div className='subscribe-input-field-block'>
+                        <input className='subscribe-input-field' type="text" placeholder='Email...'/>
+                    </div>
+                    <button className="subscribe-newsletter-btn">
+                        SUBSCRIBE
+                    </button>
+                </div>
             </div>
         </div>
     )
