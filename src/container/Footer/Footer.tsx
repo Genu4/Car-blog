@@ -45,16 +45,30 @@ const Footer = () => {
                         Subscribe our Newsletter for new car update. Let's stay
                         updated!
                     </p>
-                    <div className='subscribe-input-field-block'>
-                        <input className='subscribe-input-field' type="text" placeholder='Name...'/>
+                    <div className="subscribe-input-field-block">
+                        <input
+                            className="subscribe-input-field"
+                            type="text"
+                            placeholder="Name..."
+                        />
                     </div>
-                    <div className='subscribe-input-field-block'>
-                        <input className='subscribe-input-field' type="text" placeholder='Email...'/>
+                    <div className="subscribe-input-field-block">
+                        <input
+                            className="subscribe-input-field"
+                            type="text"
+                            placeholder="Email..."
+                        />
                     </div>
                     <button className="subscribe-newsletter-btn">
                         SUBSCRIBE
                     </button>
                 </div>
+            </div>
+            <div className="copyright">
+                <p>
+                    @2023 - All Right Reserved. Designed and Developed by{' '}
+                    <span className="developer-name">Gen</span>{' '}
+                </p>
             </div>
         </div>
     )
