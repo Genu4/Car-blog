@@ -13,7 +13,7 @@ const articlesArray:ArticlesProps[] = [
         title: 'CAR DEALERS ARE SLASHING PRICES AS MARKET SLOWS',
         author: 'by Gen | January 23, 2017',
         summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, omnis et! Officiis dignissimos a accusantium?',
-        image: '/images/4.jpg',
+        image: '/images/10.jpg',
     },
 
     {
@@ -21,7 +21,7 @@ const articlesArray:ArticlesProps[] = [
         title: 'WAYMO WILL BUILD SELF-DRIVING CARS IN MICHIGAN',
         author: 'by Gen | January 23, 2018',
         summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, omnis et! Officiis dignissimos a accusantium?',
-        image: '/images/5.jpg',
+        image: '/images/11.jpg',
     },
 
     {
@@ -29,7 +29,7 @@ const articlesArray:ArticlesProps[] = [
         title: '2019 TOYOTA PRIUS AWD-E FIRST DRIVE REVIEW',
         author: 'by Gen | January 23, 2019',
         summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, omnis et! Officiis dignissimos a accusantium?',
-        image: '/images/6.jpg',
+        image: '/images/12.jpg',
     },
 
     {
@@ -37,7 +37,7 @@ const articlesArray:ArticlesProps[] = [
         title: '‘BEST-EVER NEW CAR DEALS AVAILABLE’ AS SALES FALL',
         author: 'by Gen | January 23, 2020',
         summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, omnis et! Officiis dignissimos a accusantium?',
-        image: '/images/16.jpg',
+        image: '/images/13.jpg',
     },
 
     {
@@ -45,7 +45,7 @@ const articlesArray:ArticlesProps[] = [
         title: 'FORD SAYS A COMPACT PICKUP TRUCK IS COMING',
         author: 'by Gen | January 23, 2021',
         summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, omnis et! Officiis dignissimos a accusantium?',
-        image: '/images/17.jpg',
+        image: '/images/14.jpg',
     },
 
     {
@@ -53,7 +53,7 @@ const articlesArray:ArticlesProps[] = [
         title: '2019 HERITAGE EDITION FORD MUSTANG REVIEW',
         author: 'by Gen | January 23, 2022',
         summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, omnis et! Officiis dignissimos a accusantium?',
-        image: '/images/9.jpg',
+        image: '/images/15.jpg',
     },
 
     {
@@ -61,7 +61,7 @@ const articlesArray:ArticlesProps[] = [
         title: 'CASH IN ON THE BEST CAR DEALS RIGHT NOW',
         author: 'by Gen | January 23, 2017',
         summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, omnis et! Officiis dignissimos a accusantium?',
-        image: '/images/10.jpg',
+        image: '/images/16.jpg',
     },
 
     {
@@ -69,7 +69,7 @@ const articlesArray:ArticlesProps[] = [
         title: 'NOVITEC SHOWS OFF ITS VERSION OF THE FERRARI 812',
         author: 'by Gen | January 23, 2018',
         summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, omnis et! Officiis dignissimos a accusantium?',
-        image: '/images/11.jpg',
+        image: '/images/17.jpg',
     },
 
     {
@@ -77,7 +77,7 @@ const articlesArray:ArticlesProps[] = [
         title: '2019 CHEVY SILVERADO 1500 TRAIL BOSS DRIVERS REVIEW',
         author: 'by Gen | January 23, 2019',
         summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, omnis et! Officiis dignissimos a accusantium?',
-        image: '/images/12.jpg',
+        image: '/images/18.jpg',
     }
 
 ]

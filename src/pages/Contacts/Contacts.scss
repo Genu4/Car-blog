@@ -1,0 +1,36 @@
+.contacts-page {
+    .contacts-header {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 20px 0;
+        font-size: 24px;
+        color: white;
+    }
+
+    .contacts-text {
+        margin-bottom: 20px;
+        font-size: 16px;
+        color: #999999;
+        line-height: 1.5;
+    }
+
+    .contacts-list {
+        padding-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .contacts-list-item {
+        list-style-type: square;
+        list-style-position: inside;
+        color: #999999;
+    }
+
+    .contacts-list-item + .contacts-list-item {
+        margin-top: 15px;
+    }
+
+    .contacts-list-item-way {
+        margin-right: 5px;
+        font-weight: bold;
+    }
+}
