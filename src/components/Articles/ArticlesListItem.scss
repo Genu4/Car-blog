@@ -1,6 +1,5 @@
 .article-card-item {
     background-color: #111111;
-    
 
     .article-card-category-block {
         margin-bottom: 20px;
@@ -13,14 +12,12 @@
         img {
             width: 100%;
         }
-        
     }
 
     .article-card-img img:hover {
         box-shadow: 0 0 0 2px rgba(245, 127, 23, 0.2);
         transition: 0.15s;
     }
-
 
     .article-card-category {
         color: #f57f17;
@@ -87,7 +84,7 @@
     }
 
     .article-card-socials-block {
-        width: 130px;
+        width: 150px;
         margin: 0 auto;
         display: flex;
         justify-content: space-around;
@@ -102,16 +99,27 @@
         border: none;
         outline: none;
         cursor: pointer;
-        width: fit-content;
+        width: 26px;
     }
 
-
-    .article-card-likes::before {
-        content: '\f08a';
-        font-size: 14px;
-        font-family: FontAwesome;
+    a {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .like {
+        width: 16px;
         color: #999999;
     }
+    .article-card-likes {
+        width: 25px;
+    }
+    // .article-card-likes::before {
+    //     content: '\f08a';
+    //     font-size: 14px;
+    //     font-family: FontAwesome;
+    //     color: #999999;
+    // }
     .article-card-facebook::before {
         content: '\f09a';
         font-size: 14px;
@@ -136,16 +144,4 @@
         font-family: FontAwesome;
         color: #999999;
     }
-
-    // .article-card-socials:before {
-    //     content: '';
-    //     position: absolute;
-    //     width: 100%;
-    //     left: 0;
-    //     height: 1px;
-    //     background: #dedede;
-    //     display: block;
-    //     top: 49%;
-    //     z-index: 1;
-    // }
 }

@@ -43,7 +43,7 @@ const ArticlesListItem = ({
                 </div>
                 <div className="article-card-socials">
                     <div className="article-card-socials-block">
-                        <button className="article-card-likes"><FavoriteBorderIcon /></button>
+                        <button className="article-card-likes"><FavoriteBorderIcon className='like'/></button>
                         <a href="/"><button className="article-card-facebook"></button></a>
                         <a href="/"><button className="article-card-twitter"></button></a>
                         <a href="/"><button className="article-card-pinterest"></button></a>
