@@ -33,4 +33,57 @@
         margin-right: 5px;
         font-weight: bold;
     }
+
+    .input-fields {
+        margin: 20px 0;
+
+        .input-field {
+            background-color: #111;
+            padding: 10px;
+            border: 1px solid rgba(153, 153, 153, 0.5);
+            outline: none;
+        }
+        .input-field::placeholder {
+            font-size: 14px;
+        }
+    }
+
+    .text-area {
+        width: 100%;
+        margin-bottom: 20px;
+        background-color: #111;
+        padding: 10px;
+        border: 1px solid rgba(153, 153, 153, 0.5);
+        outline: none;
+    }
+
+    .text-area::placeholder {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 769px) {
+    .input-fields {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .input-field {
+            width: calc(33% - 30px);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .input-fields {
+        width: 100%;
+
+        .input-field {
+            width: 100%;
+        }
+
+        .input-field + .input-field {
+            margin-top: 20px;
+        }
+    }
 }

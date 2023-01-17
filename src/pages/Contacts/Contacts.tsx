@@ -25,6 +25,14 @@ const Contacts = (props: Props) => {
                     Gen@mail.com
                 </li>
             </ul>
+            <form action="">
+                <div className='input-fields'>
+                    <input className="input-field" type="text" placeholder='Name*'/>
+                    <input className="input-field" type="email" placeholder='Email*'/>
+                    <input className="input-field" type="text" placeholder='Subject'/>
+                </div>
+                <textarea className='text-area' name="" placeholder='Type your message...'></textarea>
+            </form>
         </div>
     )
 }
