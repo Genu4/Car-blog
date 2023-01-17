@@ -66,8 +66,8 @@ const Footer = () => {
             </div>
             <div className="copyright">
                 <p>
-                    @2023 - All Right Reserved. Designed and Developed by{' '}
-                    <span className="developer-name">Gen</span>{' '}
+                    @2023 - All Right Reserved. Designed and Developed by
+                    <span className="developer-name">Gen</span>
                 </p>
             </div>
         </div>

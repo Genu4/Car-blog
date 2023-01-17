@@ -199,26 +199,28 @@
     text-align: center;
 
     .developer-name {
+        margin-left: 5px;
         color: #f57f17;
     }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     .footer {
         display: flex;
         justify-content: space-around;
     }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 767px) {
     .footer {
         .footer-socials {
-            width: 100%;
-            margin-bottom: 50px;
+            width: 75%;
+            margin: 0 auto 50px;
         }
 
         .subscribe-newsletter {
-            width: 100%;
+            width: 75%;
+            margin: 0 auto 50px;
         }
     }
 }

@@ -1,4 +1,6 @@
 import { Card, CardContent } from '@mui/material'
+import FavoriteIcon from '@mui/icons-material/Favorite'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import './ArticlesListItem.scss'
 
 type Props = {
@@ -41,7 +43,7 @@ const ArticlesListItem = ({
                 </div>
                 <div className="article-card-socials">
                     <div className="article-card-socials-block">
-                        <button className="article-card-likes"></button>
+                        <button className="article-card-likes"><FavoriteBorderIcon /></button>
                         <a href="/"><button className="article-card-facebook"></button></a>
                         <a href="/"><button className="article-card-twitter"></button></a>
                         <a href="/"><button className="article-card-pinterest"></button></a>
