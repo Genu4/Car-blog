@@ -3,6 +3,7 @@ import Header from 'container/Header/Header'
 import { StyledEngineProvider } from '@mui/material/styles'
 import Main from 'container/Main/Main'
 import Footer from 'container/Footer/Footer'
+import ScrollUpBtn from 'components/ScrollUpBtn/ScrollUpBtn'
 
 type Props = {}
 const App = (props: Props) => {
@@ -13,6 +14,7 @@ const App = (props: Props) => {
                 <Header />
                 <Main />
                 <Footer />
+                <ScrollUpBtn />
             </StyledEngineProvider>
         </>
     )
