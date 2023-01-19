@@ -4,6 +4,7 @@ import { StyledEngineProvider } from '@mui/material/styles'
 import Main from 'container/Main/Main'
 import Footer from 'container/Footer/Footer'
 import ScrollUpBtn from 'components/ScrollUpBtn/ScrollUpBtn'
+import ScrollToTop from 'components/ScrollToTop/ScrollToTop'
 
 type Props = {}
 const App = (props: Props) => {
@@ -12,6 +13,7 @@ const App = (props: Props) => {
             <StyledEngineProvider injectFirst>
                 {/* <CssBaseline /> */}
                 <Header />
+                <ScrollToTop />
                 <Main />
                 <Footer />
                 <ScrollUpBtn />
