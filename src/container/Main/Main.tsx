@@ -6,6 +6,7 @@ import Home from 'pages/Home/Home'
 import News from 'pages/News/News'
 import Reviews from 'pages/Reviews/Reviews'
 import { Route, Routes } from 'react-router-dom'
+import ArticlePage from 'pages/ArticlePage/ArticlePage'
 
 type Props = {}
 const Main = (props: Props) => {
@@ -20,6 +21,7 @@ const Main = (props: Props) => {
                 <Route path="favorites" element={<Favorites />}/>
                 <Route path="about" element={<About />}/>
                 <Route path="contacts" element={<Contacts />}/>
+                {/* <Route path={`/post/:title`} element={<ArticlePage />}/> */}
             </Routes>
             
         </div>
