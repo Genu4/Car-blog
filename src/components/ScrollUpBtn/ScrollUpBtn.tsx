@@ -1,6 +1,5 @@
 import ScrollToTop from 'react-scroll-up'
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp'
-import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp'
 import './ScrollUpBtn.scss'
 
 type Props = {}

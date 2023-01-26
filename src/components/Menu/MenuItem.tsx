@@ -1,6 +1,6 @@
 import './MenuItem.scss'
 import { NavLink } from 'react-router-dom'
-import './MenuItem.scss'
+
 
 type Props = {
     to: string

@@ -1,4 +1,4 @@
-import MobileHeader2 from './MobileHeader'
+import MobileHeader from './MobileHeader'
 import logo from './images/carbloglogo.png'
 import './Header.scss'
 import Menu from 'components/Menu/Menu'
@@ -26,10 +26,8 @@ const Header = () => {
                         <div className="header-search-button"></div>
                     </div>
                 </div>
-                {/* <MobileHeader /> */}
-                <MobileHeader2 />
-                {/* <MobileMenu /> */}
-                {/* <MobileMenu2 /> */}
+
+                <MobileHeader />
             </div>
         </header>
     )
