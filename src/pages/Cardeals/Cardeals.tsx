@@ -4,6 +4,7 @@ import ArticlesListItem from 'components/Articles/ArticlesListItem'
 import './Cardeals.scss'
 
 type ArticlesProps = {
+    id: number
     category: string
     title: string
     author: string
@@ -32,6 +33,7 @@ const Cardeals = (props: Props) => {
                         )
                         .map(
                             ({
+                                id,
                                 category,
                                 title,
                                 author,
@@ -40,6 +42,7 @@ const Cardeals = (props: Props) => {
                             }: ArticlesProps) => (
                                 <Grid item xs={12} sm={6} lg={4}>
                                     <ArticlesListItem
+                                        id={id}
                                         category={category}
                                         title={title}
                                         author={author}

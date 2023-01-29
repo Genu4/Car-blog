@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Menu.scss'
 import MenuItem from './MenuItem'
 type Props = {}
@@ -15,6 +16,7 @@ const Menu = (props: Props) => {
                         <li className="sub-menu-item">
                             <div className="sub-menu-item-link-blocks">
                                 <div className="sub-menu-block">
+                                    
                                     <a href="/some/valid/uri">
                                         <div className="sub-menu-block-car-deals-img-1">
                                             <p className="sub-menu-block-category">

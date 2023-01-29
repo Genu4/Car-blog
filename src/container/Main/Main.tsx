@@ -7,6 +7,7 @@ import News from 'pages/News/News'
 import Reviews from 'pages/Reviews/Reviews'
 import { Route, Routes } from 'react-router-dom'
 import ArticlePage from 'pages/ArticlePage/ArticlePage'
+import ArticlePages from 'pages/ArticlePages/ArticlePages'
 
 type Props = {}
 const Main = (props: Props) => {
@@ -21,7 +22,8 @@ const Main = (props: Props) => {
                 <Route path="favorites" element={<Favorites />}/>
                 <Route path="about" element={<About />}/>
                 <Route path="contacts" element={<Contacts />}/>
-                {/* <Route path={`/post/:title`} element={<ArticlePage />}/> */}
+                <Route path="/article/:title" element={<ArticlePages />}/>
+                
             </Routes>
             
         </div>

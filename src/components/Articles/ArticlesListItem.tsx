@@ -1,9 +1,13 @@
 import { Card, CardContent } from '@mui/material'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import { Link } from 'react-router-dom'
+
 import './ArticlesListItem.scss'
 
+
 type Props = {
+    id: number
     category: string
     title: string
     author: string
@@ -11,6 +15,7 @@ type Props = {
     image: string
 }
 const ArticlesListItem = ({
+    id,
     category,
     title,
     author,
@@ -30,9 +35,9 @@ const ArticlesListItem = ({
                         {category}
                     </a>
                 </div>
-
                 <h2 className="article-card-title">
-                    <a href="/some/valid/uri">{title}</a>
+                    <Link to={`/article/${title}`}>{title}</Link>
+                    
                 </h2>
                 <div className="article-autor-date">{author}</div>
                 <p className="article-short-content">{summary}</p>
