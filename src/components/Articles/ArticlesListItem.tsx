@@ -4,7 +4,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import { Link } from 'react-router-dom'
 
 import './ArticlesListItem.scss'
-
+import { useAppSelector } from 'redux/hooks'
 
 type Props = {
     id: number
@@ -22,6 +22,8 @@ const ArticlesListItem = ({
     summary,
     image,
 }: Props) => {
+    const isLiked = useAppSelector((state) => state.likeArticles[id])
+
     return (
         <Card className="article-card-item">
             <CardContent>
@@ -37,7 +39,6 @@ const ArticlesListItem = ({
                 </div>
                 <h2 className="article-card-title">
                     <Link to={`/article/${title}`}>{title}</Link>
-                    
                 </h2>
                 <div className="article-autor-date">{author}</div>
                 <p className="article-short-content">{summary}</p>
@@ -48,11 +49,25 @@ const ArticlesListItem = ({
                 </div>
                 <div className="article-card-socials">
                     <div className="article-card-socials-block">
-                        <button className="article-card-likes"><FavoriteBorderIcon className='like'/></button>
-                        <a href="/"><button className="article-card-facebook"></button></a>
-                        <a href="/"><button className="article-card-twitter"></button></a>
-                        <a href="/"><button className="article-card-pinterest"></button></a>
-                        <a href="/"><button className="article-card-email"></button></a>
+                        <button className="article-card-likes">
+                            {isLiked ? (
+                                <FavoriteIcon />
+                            ) : (
+                                <FavoriteBorderIcon />
+                            )}
+                        </button>
+                        <a href="/">
+                            <button className="article-card-facebook"></button>
+                        </a>
+                        <a href="/">
+                            <button className="article-card-twitter"></button>
+                        </a>
+                        <a href="/">
+                            <button className="article-card-pinterest"></button>
+                        </a>
+                        <a href="/">
+                            <button className="article-card-email"></button>
+                        </a>
                     </div>
                 </div>
             </CardContent>
