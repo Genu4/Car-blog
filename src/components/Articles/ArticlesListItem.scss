@@ -1,5 +1,6 @@
 .article-card-item {
     background-color: #111111;
+    height: 600px;
 
     .article-card-category-block {
         margin-bottom: 20px;
@@ -30,7 +31,7 @@
         text-align: center;
 
         a {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 22px;
             color: #ffffff;
             text-transform: uppercase;
@@ -96,10 +97,11 @@
     .article-card-pinterest,
     .article-card-email {
         background-color: #111111;
+        padding: 0;
         border: none;
         outline: none;
         cursor: pointer;
-        width: 26px;
+        width: fit-content;
     }
 
     a {
@@ -110,6 +112,10 @@
     
     .article-card-likes {
         width: 25px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: #f57f17;
     }
 
