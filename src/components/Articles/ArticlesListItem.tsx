@@ -2,9 +2,11 @@ import { Card, CardContent } from '@mui/material'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import { Link } from 'react-router-dom'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { addLike, removeLike } from 'redux/likeReducer'
 
 import './ArticlesListItem.scss'
-import { useAppSelector } from 'redux/hooks'
+
 
 type Props = {
     id: number
@@ -23,6 +25,7 @@ const ArticlesListItem = ({
     image,
 }: Props) => {
     const isLiked = useAppSelector((state) => state.likeArticles[id])
+    const dispatch = useAppDispatch()
 
     return (
         <Card className="article-card-item">
@@ -49,7 +52,14 @@ const ArticlesListItem = ({
                 </div>
                 <div className="article-card-socials">
                     <div className="article-card-socials-block">
-                        <button className="article-card-likes">
+                        <button
+                            onClick={() =>
+                                isLiked
+                                    ? dispatch(removeLike(id))
+                                    : dispatch(addLike(id))
+                            }
+                            className="article-card-likes"
+                        >
                             {isLiked ? (
                                 <FavoriteIcon />
                             ) : (
