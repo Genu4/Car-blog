@@ -7,7 +7,6 @@ import { addLike, removeLike } from 'redux/likeReducer'
 
 import './ArticlesListItem.scss'
 
-
 type Props = {
     id: number
     category: string
@@ -31,24 +30,23 @@ const ArticlesListItem = ({
         <Card className="article-card-item">
             <CardContent>
                 <div className="article-card-img">
-                    <a href="/some/valid/uri">
-                        <img src={image} alt="" />
-                    </a>
+                    <img src={image} alt="car-img" />
                 </div>
                 <div className="article-card-category-block">
-                    <a href="/some/valid/uri" className="article-card-category">
-                        {category}
-                    </a>
+                    <p className="article-card-category">{category}</p>
                 </div>
                 <h2 className="article-card-title">
-                    <Link to={`/article/${title}`}>{title}</Link>
+                    <Link to={`/article/${id}`}>{title}</Link>
                 </h2>
                 <div className="article-autor-date">{author}</div>
                 <p className="article-short-content">{summary}</p>
                 <div className="read-more-btn">
-                    <a className="read-more-btn-link" href="/some/valid/uri">
+                    <Link
+                        to={`/article/${id}`}
+                        className="read-more-btn-link"
+                    >
                         Read the article
-                    </a>
+                    </Link>
                 </div>
                 <div className="article-card-socials">
                     <div className="article-card-socials-block">

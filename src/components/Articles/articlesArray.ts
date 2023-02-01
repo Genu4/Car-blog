@@ -1,4 +1,4 @@
-type ArticlesProps = {
+export type ArticlesProps = {
     id: number,
     category: string
     title: string
@@ -91,5 +91,13 @@ const articlesArray:ArticlesProps[] = [
     }
 
 ]
+
+export const getArticlesObject = (array:ArticlesProps[]) => array.reduce(
+    (object, product) => ({
+        ...object,
+        [product.id]: product,
+    }),
+    {}
+)
 
 export default articlesArray
