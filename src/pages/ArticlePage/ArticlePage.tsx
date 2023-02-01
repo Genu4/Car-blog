@@ -13,16 +13,29 @@ type Props = {}
 
 const ArticlePage = (props: Props) => {
     const { id } = useParams()
+    
     console.log(id)
     const articlesObject: ArticlesObject = getArticlesObject(articlesArray)
     return (
         <div className="article-content">
-            
-            <div>{articlesObject[parseInt(id!)].title}</div>
+            <div>
+                <p className="article-title">
+                    {articlesObject[parseInt(id!)].title}
+                </p>
+            </div>
+
+            <div>
+                <p className="article-category">
+                    {articlesObject[parseInt(id!)].category}
+                </p>
+            </div>
+            <div>
+                <p className="article-author">
+                    {articlesObject[parseInt(id!)].author}
+                </p>
+            </div>
             <div>{articlesObject[parseInt(id!)].image}</div>
-            <div>{articlesObject[parseInt(id!)].category}</div>
-            <div>{articlesObject[parseInt(id!)].author}</div>
-            <div>{articlesObject[parseInt(id!)].summary}</div>
+            <div>{articlesObject[parseInt(id!)].articleText}</div>
         </div>
     )
 }

@@ -1,3 +1,24 @@
 .article-content {
     color: white;
+    padding: 20px 0;
+
+    .article-title {
+        width: fit-content;
+        margin: 0 auto 20px;
+        font-size: 24px;
+        border-bottom: 1px solid #f57f17;
+    }
+
+    .article-category {
+        width: fit-content;
+        margin: 0 auto 20px;
+        color: #f57f17;
+    }
+
+    .article-author {
+        width: fit-content;
+        margin: 0 auto 20px;
+        font-size: 14px;
+        color: #666666;
+    }
 }
