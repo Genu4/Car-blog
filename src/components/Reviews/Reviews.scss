@@ -1,0 +1,42 @@
+.reviews-block {
+    height: fit-content;
+    padding: 20px 0;
+
+    .article-reviews-header {
+        text-align: center;
+        font-size: 22px;
+        color: whitesmoke;
+    }
+
+    .review-card {
+        margin-top: 10px;
+        background-color: #111111;
+        color: #999999;
+    }
+
+    .reviewer-name {
+        margin-bottom: 15px;
+        display: flex;
+        p {
+            margin-left: 5px;
+        }
+    }
+
+    .review-text {
+        margin-bottom: 10px;
+        display: flex;
+        p {
+            margin-left: 5px;
+        }
+    }
+
+
+    .form-header {
+        color: whitesmoke;
+    }
+
+    .reviewer-name-field {
+        width: 200px;
+        height: 50px;
+    }
+}
