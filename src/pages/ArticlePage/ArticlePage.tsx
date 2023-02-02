@@ -34,7 +34,9 @@ const ArticlePage = (props: Props) => {
                     {articlesObject[parseInt(id!)].author}
                 </p>
             </div>
-            <div>{articlesObject[parseInt(id!)].image}</div>
+            <div className='article-img-block'>
+                <img className='article-img' src={articlesObject[parseInt(id!)].image} alt="" />
+                </div>
             <div>{articlesObject[parseInt(id!)].articleText}</div>
         </div>
     )

@@ -21,4 +21,14 @@
         font-size: 14px;
         color: #666666;
     }
+
+    .article-img-block {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .article-img {
+        width: 80%;
+    }
 }
