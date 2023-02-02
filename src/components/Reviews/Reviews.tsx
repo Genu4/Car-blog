@@ -1,4 +1,10 @@
-import { Card, CardContent, TextareaAutosize, TextField, Typography } from '@mui/material'
+import {
+    Card,
+    CardContent,
+    TextareaAutosize,
+    TextField,
+    Typography,
+} from '@mui/material'
 import { useState } from 'react'
 import './Reviews.scss'
 
@@ -45,12 +51,20 @@ const Reviews = (props: Props) => {
                 ))}
             </div>
             <form>
-                <h3 className='form-header'>Please leave a review</h3>
+                <h3 className="form-header">Please leave a review</h3>
                 <div>
-                    <TextField className='reviewer-name-field' placeholder='Your name'/>
+                    <input
+                        className="reviewer-name-field"
+                        type="text"
+                        placeholder="Your name..."
+                    />
                 </div>
                 <div>
-                    <TextareaAutosize className='reviewe-text-field' placeholder='Leave a review'/>
+                    <textarea
+                        className="reviewe-text-field"
+                        
+                        placeholder="Leave a review..."
+                    />
                 </div>
             </form>
         </div>

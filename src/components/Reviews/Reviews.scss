@@ -30,13 +30,46 @@
         }
     }
 
-
     .form-header {
         color: whitesmoke;
+        margin-bottom: 10px;
     }
 
     .reviewer-name-field {
-        width: 200px;
-        height: 50px;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        border: 1px solid #dedede;
+        outline: none;
+        background: none;
+        color: #f57f17;
+    }
+
+    .reviewe-text-field {
+        height: 150px;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        border: 1px solid #dedede;
+        outline: none;
+        background: none;
+        color: #f57f17;
+        resize: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .reviewer-name-field {
+        width: 30%;
+    }
+    .reviewe-text-field {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .reviewer-name-field {
+        width: 100%;
+    }
+    .reviewe-text-field {
+        width: 100%;
     }
 }
