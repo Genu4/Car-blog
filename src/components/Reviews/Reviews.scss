@@ -54,6 +54,18 @@
         color: #f57f17;
         resize: none;
     }
+
+    .send-btn {
+        border-radius: 0;
+        border: 1px solid #dedede;
+        outline: none;
+        color: #f57f17;
+    }
+
+    .send-btn:hover {
+        border: 1px solid #f57f17;
+        color: #dedede;
+    }
 }
 
 @media (min-width: 768px) {

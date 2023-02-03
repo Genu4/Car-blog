@@ -1,11 +1,5 @@
-import {
-    Card,
-    CardContent,
-    TextareaAutosize,
-    TextField,
-    Typography,
-} from '@mui/material'
-import { useState } from 'react'
+import { Button, Card, CardContent, Typography } from '@mui/material'
+import React, { useState } from 'react'
 import './Reviews.scss'
 
 type Props = {}
@@ -28,7 +22,40 @@ const Reviews = (props: Props) => {
     ]
 
     const [reviews, setReviews] = useState<Review[]>(arrReviews)
+    const [newReview, setNewReview] = useState<Review>({
+        name: '',
+        text: '',
+    })
 
+    const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setNewReview((prevState: Review) => ({
+            ...prevState,
+            name: e.target.value,
+        }))
+    }
+
+    const handleText = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        setNewReview((prevState: Review) => ({
+            ...prevState,
+            text: e.target.value,
+        }))
+    }
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        if (newReview.name === '' || newReview.text === '') {
+            alert('All fields are requared')
+        } else {
+            setReviews((prevState: Review[]) => {
+                return [...prevState, newReview]
+            })
+            setNewReview({
+                name: '',
+                text: '',
+            })
+        }
+    }
+    
     return (
         <div className="reviews-block">
             <Typography variant="h4" className="article-reviews-header">
@@ -50,22 +77,28 @@ const Reviews = (props: Props) => {
                     </Card>
                 ))}
             </div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <h3 className="form-header">Please leave a review</h3>
                 <div>
                     <input
                         className="reviewer-name-field"
                         type="text"
                         placeholder="Your name..."
+                        value={newReview.name}
+                        onChange={handleName}
                     />
                 </div>
                 <div>
                     <textarea
                         className="reviewe-text-field"
-                        
                         placeholder="Leave a review..."
+                        value={newReview.text}
+                        onChange={handleText}
                     />
                 </div>
+                <Button type="submit" className="send-btn">
+                    Send
+                </Button>
             </form>
         </div>
     )
