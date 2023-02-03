@@ -33,7 +33,9 @@ const ArticlesListItem = ({
                     <img src={image} alt="car-img" />
                 </div>
                 <div className="article-card-category-block">
-                    <p className="article-card-category">{category}</p>
+                    <Link className="article-card-category" to={`/${category}`}>
+                        {category}
+                    </Link>
                 </div>
                 <h2 className="article-card-title">
                     <Link to={`/article/${id}`}>{title}</Link>
@@ -41,10 +43,7 @@ const ArticlesListItem = ({
                 <div className="article-autor-date">{author}</div>
                 <p className="article-short-content">{summary}</p>
                 <div className="read-more-btn">
-                    <Link
-                        to={`/article/${id}`}
-                        className="read-more-btn-link"
-                    >
+                    <Link to={`/article/${id}`} className="read-more-btn-link">
                         Read the article
                     </Link>
                 </div>
