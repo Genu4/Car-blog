@@ -17,7 +17,7 @@ const Cardeals = (props: Props) => {
     return (
         <>
             <h1 className="cardeals-header">
-                CATEGORY: <span className="category-name">CAR DEALS</span>
+                CATEGORY: <span className="category-name">DEALS</span>
             </h1>
             <div className="article-list">
                 <Grid
@@ -29,7 +29,7 @@ const Cardeals = (props: Props) => {
                     {articlesArray
                         .filter(
                             ({ category }: ArticlesProps) =>
-                                category === 'Car Deals'
+                                category === 'Deals'
                         )
                         .map(
                             ({

@@ -10,7 +10,7 @@ const Menu = (props: Props) => {
                     <MenuItem to="/">Home</MenuItem>
                 </li>
                 <li className="header-nav-list-item has-child">
-                    <MenuItem to="/car-deals">Car Deals</MenuItem>
+                    <MenuItem to="/deals">Deals</MenuItem>
 
                     <ul className="sub-menu">
                         <li className="sub-menu-item">

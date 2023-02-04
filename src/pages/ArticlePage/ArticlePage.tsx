@@ -3,7 +3,7 @@ import articlesArray, {
     ArticlesProps,
 } from 'components/Articles/articlesArray'
 import Reviews from 'components/Reviews/Reviews'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import './ArticlePage.scss'
 
 type ArticlesObject = {
@@ -26,10 +26,13 @@ const ArticlePage = (props: Props) => {
                     </p>
                 </div>
 
-                <div>
-                    <p className="article-category">
+                <div className="article-category-block">
+                    <Link
+                        className="article-category"
+                        to={`/${articlesObject[parseInt(id!)].category}`}
+                    >
                         {articlesObject[parseInt(id!)].category}
-                    </p>
+                    </Link>
                 </div>
                 <div>
                     <p className="article-author">

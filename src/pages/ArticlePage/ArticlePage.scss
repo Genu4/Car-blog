@@ -6,12 +6,16 @@
         width: fit-content;
         margin: 0 auto 20px;
         font-size: 24px;
+        letter-spacing: 1px;
         border-bottom: 1px solid #f57f17;
+        font-weight: 700;
     }
-
+    .article-category-block {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
     .article-category {
-        width: fit-content;
-        margin: 0 auto 20px;
         color: #f57f17;
     }
 

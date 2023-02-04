@@ -12,7 +12,7 @@ export type ArticlesProps = {
 const articlesArray:ArticlesProps[] = [
     {
         id:1,
-        category: 'Car Deals',
+        category: 'Deals',
         title: 'CAR DEALERS ARE SLASHING PRICES AS MARKET SLOWS',
         author: 'by Gen | January 23, 2017',
         summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, omnis et! Officiis dignissimos a accusantium?',
@@ -42,7 +42,7 @@ const articlesArray:ArticlesProps[] = [
 
     {
         id:4,
-        category: 'Car Deals',
+        category: 'Deals',
         title: '‘BEST-EVER NEW CAR DEALS AVAILABLE’ AS SALES FALL',
         author: 'by Gen | January 23, 2020',
         summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, omnis et! Officiis dignissimos a accusantium?',
@@ -72,7 +72,7 @@ const articlesArray:ArticlesProps[] = [
 
     {
         id:7,
-        category: 'Car Deals',
+        category: 'Deals',
         title: 'CASH IN ON THE BEST CAR DEALS RIGHT NOW',
         author: 'by Gen | January 23, 2017',
         summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, omnis et! Officiis dignissimos a accusantium?',
