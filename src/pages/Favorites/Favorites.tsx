@@ -1,3 +1,4 @@
+import { Grid } from '@mui/material'
 import articlesArray, {
     ArticlesProps,
     getArticlesObject,
@@ -9,18 +10,20 @@ type Props = {
     favoriteArticles: {
         [id: number]: number
     }
-    
+
     removeFromFavorites: (id: number) => void
 }
 
-const Favorites = ({
-    favoriteArticles,
-    removeFromFavorites,
-}: Props) => {
+const Favorites = ({ favoriteArticles, removeFromFavorites }: Props) => {
     return (
         <>
             <div className="fav-content">
-                <FavoriteArticlesList favoriteArticles={favoriteArticles} removeFromFavorites={removeFromFavorites}/>
+                <Grid container spacing={4}>
+                    <FavoriteArticlesList
+                        favoriteArticles={favoriteArticles}
+                        removeFromFavorites={removeFromFavorites}
+                    />
+                </Grid>
             </div>
         </>
     )

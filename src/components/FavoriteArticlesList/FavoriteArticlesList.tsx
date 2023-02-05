@@ -1,3 +1,4 @@
+import { Grid } from '@mui/material'
 import articlesArray, {
     getArticlesObject,
     ArticlesProps,
@@ -12,7 +13,7 @@ type Props = {
         [id: number]: ArticlesProps
     }
     removeFromFavorites: (id: number) => void
-    ArticlesItem?:any
+    ArticlesItem?: any
 }
 const FavoriteArticlesList = ({
     favoriteArticles,
@@ -22,7 +23,7 @@ const FavoriteArticlesList = ({
 }: Props) => {
     console.log(favoriteArticles)
     return (
-        <div>
+        <>
             <h1>Favorites</h1>
             {Object.keys(favoriteArticles).map((articleId) => (
                 <ArticlesItem
@@ -31,7 +32,7 @@ const FavoriteArticlesList = ({
                     article={articlesObject[parseInt(articleId)]}
                 />
             ))}
-        </div>
+        </>
     )
 }
 export default FavoriteArticlesList
