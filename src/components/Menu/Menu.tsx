@@ -15,9 +15,12 @@ type Props = {
     }
 }
 
-const Menu = ({ favoriteArticles, articlesObject = getArticlesObject(articlesArray) }: Props) => {
+const Menu = ({
+    favoriteArticles,
+    articlesObject = getArticlesObject(articlesArray),
+}: Props) => {
     console.log(favoriteArticles)
-    return ( 
+    return (
         <nav className="header-nav">
             <ul className="header-nav-list">
                 <li className="header-nav-list-item">
@@ -329,15 +332,7 @@ const Menu = ({ favoriteArticles, articlesObject = getArticlesObject(articlesArr
                 <li className="header-nav-list-item">
                     <MenuItem to="/favorites">
                         Favorites:{' '}
-                        <span>{Object.keys(favoriteArticles).length}; {' '}</span>
-                        <span>
-                            {Object.keys(favoriteArticles).map((articleId) => (
-                                <span key={articleId}>
-                                    {articleId};
-                                    
-                                </span>
-                            ))}
-                        </span>
+                        <span>{Object.keys(favoriteArticles).length}</span>
                     </MenuItem>
                 </li>
                 <li className="header-nav-list-item">

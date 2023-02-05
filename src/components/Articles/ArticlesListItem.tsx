@@ -82,7 +82,7 @@ const ArticlesListItem = ({
                         <a href="/">
                             <button className="article-card-email"></button>
                         </a>
-                        <Button onClick={() => removeFromFavorites(id)}>Remove From Liked</Button>
+                        <Button variant='outlined' onClick={() => removeFromFavorites(id)}>Remove From Liked</Button>
                     </div>
                 </div>
             </CardContent>

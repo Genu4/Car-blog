@@ -1,7 +1,7 @@
 import Grid from '@mui/material/Grid'
 import articlesArray from 'components/Articles/articlesArray'
 import ArticlesListItem from 'components/Articles/ArticlesListItem'
-import './Cardeals.scss'
+import './Deals.scss'
 
 type ArticlesProps = {
     id: number
@@ -14,11 +14,12 @@ type ArticlesProps = {
 
 type Props = {
     addToFavoriteArticles:(id:number) => void
+    removeFromFavorites: (id: number) => void
 }
-const Cardeals = ({addToFavoriteArticles}: Props) => {
+const Deals = ({addToFavoriteArticles, removeFromFavorites}: Props) => {
     return (
         <>
-            <h1 className="cardeals-header">
+            <h1 className="Deals-header">
                 CATEGORY: <span className="category-name">DEALS</span>
             </h1>
             <div className="article-list">
@@ -51,6 +52,7 @@ const Cardeals = ({addToFavoriteArticles}: Props) => {
                                         summary={summary}
                                         image={image}
                                         addToFavoriteArticles={addToFavoriteArticles}
+                                        removeFromFavorites={removeFromFavorites}
                                     />
                                 </Grid>
                             )
@@ -60,4 +62,4 @@ const Cardeals = ({addToFavoriteArticles}: Props) => {
         </>
     )
 }
-export default Cardeals
+export default Deals

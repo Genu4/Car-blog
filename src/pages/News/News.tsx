@@ -14,8 +14,9 @@ type ArticlesProps = {
 
 type Props = {
     addToFavoriteArticles:(id:number) => void
+    removeFromFavorites:(id:number) => void
 }
-const News = ({addToFavoriteArticles}: Props) => {
+const News = ({addToFavoriteArticles, removeFromFavorites}: Props) => {
     return (
         <>
             <h1 className="news-header">
@@ -50,6 +51,7 @@ const News = ({addToFavoriteArticles}: Props) => {
                                         summary={summary}
                                         image={image}
                                         addToFavoriteArticles={addToFavoriteArticles}
+                                        removeFromFavorites={removeFromFavorites}
                                     />
                                 </Grid>
                             )
