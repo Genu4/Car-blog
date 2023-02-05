@@ -16,8 +16,9 @@ type Props = {
 
 const Favorites = ({ favoriteArticles, removeFromFavorites }: Props) => {
     return (
-        <>
-            <div className="fav-content">
+        <div className="favorites-content">
+            <h1 className="favorites-header">Favorites</h1>
+            <div>
                 <Grid container spacing={4}>
                     <FavoriteArticlesList
                         favoriteArticles={favoriteArticles}
@@ -25,7 +26,7 @@ const Favorites = ({ favoriteArticles, removeFromFavorites }: Props) => {
                     />
                 </Grid>
             </div>
-        </>
+        </div>
     )
 }
 export default Favorites

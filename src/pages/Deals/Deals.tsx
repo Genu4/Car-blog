@@ -19,7 +19,7 @@ type Props = {
 const Deals = ({addToFavoriteArticles, removeFromFavorites}: Props) => {
     return (
         <>
-            <h1 className="Deals-header">
+            <h1 className="deals-header">
                 CATEGORY: <span className="category-name">DEALS</span>
             </h1>
             <div className="article-list">

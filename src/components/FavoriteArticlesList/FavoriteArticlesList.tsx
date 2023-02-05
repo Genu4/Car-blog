@@ -24,7 +24,6 @@ const FavoriteArticlesList = ({
     console.log(favoriteArticles)
     return (
         <>
-            <h1>Favorites</h1>
             {Object.keys(favoriteArticles).map((articleId) => (
                 <ArticlesItem
                     key={articleId}
