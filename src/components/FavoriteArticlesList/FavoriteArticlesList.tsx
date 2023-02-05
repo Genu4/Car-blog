@@ -1,4 +1,8 @@
-import articlesArray, { getArticlesObject, ArticlesProps } from "components/Articles/articlesArray"
+import articlesArray, {
+    getArticlesObject,
+    ArticlesProps,
+} from 'components/Articles/articlesArray'
+import FavoriteArticlesListItem from './FavoriteArticlesListItem'
 
 type Props = {
     favoriteArticles: {
@@ -8,28 +12,25 @@ type Props = {
         [id: number]: ArticlesProps
     }
     removeFromFavorites: (id: number) => void
+    ArticlesItem?:any
 }
-const FavoriteArticlesList = ({favoriteArticles, articlesObject=getArticlesObject(articlesArray), removeFromFavorites}: Props) => {
+const FavoriteArticlesList = ({
+    favoriteArticles,
+    articlesObject = getArticlesObject(articlesArray),
+    removeFromFavorites,
+    ArticlesItem = FavoriteArticlesListItem,
+}: Props) => {
+    console.log(favoriteArticles)
     return (
         <div>
             <h1>Favorites</h1>
             {Object.keys(favoriteArticles).map((articleId) => (
-                <div key={articleId}>
-                    <div>
-                        {articleId}: {articlesObject[parseInt(articleId)].title}
-                        ;
-                    </div>
-                    <div>
-                        <img
-                            src={articlesObject[parseInt(articleId)].image}
-                            alt=""
-                        />
-                    </div>
-                    <button onClick={() => removeFromFavorites(parseInt(articleId))}>Delete</button>
-                </div>
-                
+                <ArticlesItem
+                    key={articleId}
+                    removeFromFavorites={removeFromFavorites}
+                    article={articlesObject[parseInt(articleId)]}
+                />
             ))}
-            
         </div>
     )
 }
