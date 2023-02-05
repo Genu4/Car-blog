@@ -6,7 +6,7 @@ import './Favorites.scss'
 
 type Props = {
     favoriteArticles: {
-        id: number
+        [id: number]:number
     }
     articlesObject?: {
         [id: number]: ArticlesProps

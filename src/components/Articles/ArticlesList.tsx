@@ -14,10 +14,10 @@ type ArticlesProps = {
 
 type Props = { 
     addToFavoriteArticles: (id: number) => void 
-    removeFromFavorites: (total: number, price: number) => void 
+    removeFromFavorites: (id: number) => void
 }
 
-const ArticlesList = ({ addToFavoriteArticles, removeFromFavorites }: Props) => {
+const ArticlesList = ({ addToFavoriteArticles, removeFromFavorites}: Props) => {
     return (
         <div className="article-list">
             <Grid container direction="row" justifyContent="center" spacing={4}>

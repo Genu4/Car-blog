@@ -1,4 +1,3 @@
-import CssBaseline from '@mui/material/CssBaseline'
 import Header from 'container/Header/Header'
 import { StyledEngineProvider } from '@mui/material/styles'
 import Main from 'container/Main/Main'
@@ -6,16 +5,17 @@ import Footer from 'container/Footer/Footer'
 import ScrollUpBtn from 'components/ScrollUpBtn/ScrollUpBtn'
 import ScrollToTop from 'components/ScrollToTop/ScrollToTop'
 import { useState } from 'react'
-import { Button } from '@mui/material'
+import { omit } from 'lodash'
+
 
 type FavoriteArticles = {
-    id: number
+    [id: number]: number
 }
 
 const App = () => {
-    
-
-    const [favoriteArticles, setFavoritesArticles] = useState<FavoriteArticles>({})
+    const [favoriteArticles, setFavoritesArticles] = useState<FavoriteArticles>(
+        {}
+    )
 
     const addToFavoriteArticles = (id: number) => {
         setFavoritesArticles((prevState: FavoriteArticles) => ({
@@ -24,13 +24,11 @@ const App = () => {
         }))
     }
 
-    
-    // const removeFromFavorites = (total: number, price: number) => {
-    //     setLikeData((prevState: LikeDataProps) => ({
-    //         totalCount: prevState.totalCount - total,
-    //         totalPrice: prevState.totalPrice - total * price,
-    //     }))
-    // }
+    const removeFromFavorites = (id: number) => {
+        setFavoritesArticles((prevState: FavoriteArticles) =>
+            omit(prevState, [id])
+        )
+    }
 
     return (
         <>

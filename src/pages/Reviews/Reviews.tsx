@@ -12,8 +12,10 @@ type ArticlesProps = {
     image: string
 }
 
-type Props = {}
-const Reviews = (props: Props) => {
+type Props = {
+    addToFavoriteArticles:(id:number) => void
+}
+const Reviews = ({addToFavoriteArticles}: Props) => {
     return (
         <>
             <h1 className="reviews-header">
@@ -48,6 +50,7 @@ const Reviews = (props: Props) => {
                                         author={author}
                                         summary={summary}
                                         image={image}
+                                        addToFavoriteArticles={addToFavoriteArticles}
                                     />
                                 </Grid>
                             )

@@ -15,7 +15,7 @@ type Props = {
     summary: string
     image: string
     addToFavoriteArticles: (id: number) => void 
-    removeFromFavorites: (total: number, price: number) => void 
+    removeFromFavorites: (id: number) => void 
 }
 const ArticlesListItem = ({
     id,
@@ -82,7 +82,7 @@ const ArticlesListItem = ({
                         <a href="/">
                             <button className="article-card-email"></button>
                         </a>
-                        <Button onClick={() => removeFromFavorites(2,100)}>Remove From Liked</Button>
+                        <Button onClick={() => removeFromFavorites(id)}>Remove From Liked</Button>
                     </div>
                 </div>
             </CardContent>
