@@ -1,8 +1,4 @@
 import { Grid } from '@mui/material'
-import articlesArray, {
-    ArticlesProps,
-    getArticlesObject,
-} from 'components/Articles/articlesArray'
 import FavoriteArticlesList from 'components/FavoriteArticlesList/FavoriteArticlesList'
 import './Favorites.scss'
 

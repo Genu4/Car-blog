@@ -19,6 +19,9 @@ const FavoriteArticlesListItem = ({
     addToFavoriteArticles,
     removeFromFavorites,
 }: Props) => {
+    const isLiked = useAppSelector((state) => state.likeArticles[article.id])
+    const dispatch = useAppDispatch()
+
     return (
         <Grid item xs={12} sm={6} lg={4}>
             <Card className="favorite-article-card-item">
@@ -51,12 +54,12 @@ const FavoriteArticlesListItem = ({
                     </div>
                     <div className="article-card-socials">
                         <div className="article-card-socials-block">
-                            {/* <button
+                            <button
                         onClick={() => {
                             isLiked
-                                ? dispatch(removeLike(id))
-                                : dispatch(addLike(id));
-                                addToFavoriteArticles(id);    
+                                ? dispatch(removeLike(article.id))
+                                : dispatch(addLike(article.id));
+                                addToFavoriteArticles(article.id);    
                         }}
                         className="article-card-likes"
                     >
@@ -65,7 +68,7 @@ const FavoriteArticlesListItem = ({
                         ) : (
                             <FavoriteBorderIcon />
                         )}
-                    </button> */}
+                    </button>
 
                             <a href="/">
                                 <button className="article-card-facebook"></button>
