@@ -3,7 +3,14 @@ import logo from './images/carbloglogo.png'
 import './Header.scss'
 import Menu from 'components/Menu/Menu'
 
-const Header = () => {
+type Props = {
+    likeData: {
+        totalCount: number
+        totalPrice: number
+    }
+}
+
+const Header = ({ likeData }: Props) => {
     return (
         <header>
             <div className="container">
@@ -11,7 +18,7 @@ const Header = () => {
                     <div className="header-logo">
                         <img src={logo} alt="" />
                     </div>
-                    <Menu />
+                    <Menu likeData={likeData}/>
                     <div className="header-search">
                         <div className="search-field-block">
                             <input

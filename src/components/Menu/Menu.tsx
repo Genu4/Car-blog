@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom'
 import './Menu.scss'
 import MenuItem from './MenuItem'
-type Props = {}
-const Menu = (props: Props) => {
+
+type Props = {
+    likeData: {
+        totalCount: number
+        totalPrice: number
+    }
+}
+
+const Menu = ({ likeData }: Props) => {
     return (
         <nav className="header-nav">
             <ul className="header-nav-list">
@@ -11,12 +18,10 @@ const Menu = (props: Props) => {
                 </li>
                 <li className="header-nav-list-item has-child">
                     <MenuItem to="/deals">Deals</MenuItem>
-
                     <ul className="sub-menu">
                         <li className="sub-menu-item">
                             <div className="sub-menu-item-link-blocks">
                                 <div className="sub-menu-block">
-                                    
                                     <a href="/some/valid/uri">
                                         <div className="sub-menu-block-car-deals-img-1">
                                             <p className="sub-menu-block-category">
@@ -315,7 +320,10 @@ const Menu = (props: Props) => {
                     </ul>
                 </li>
                 <li className="header-nav-list-item">
-                    <MenuItem to="/favorites">Favorites</MenuItem>
+                    <MenuItem to="/favorites">Favorites:{' '}
+                    <span>{likeData.totalCount}</span>:{' '}
+                    <span>{likeData.totalPrice}</span>
+                    </MenuItem>
                 </li>
                 <li className="header-nav-list-item">
                     <MenuItem to="/about">About</MenuItem>
