@@ -1,24 +1,14 @@
-import './Menu.scss'
 import MenuItem from './MenuItem'
 
-import articlesArray, {
-    ArticlesProps,
-    getArticlesObject,
-} from 'components/Articles/articlesArray'
+import './Menu.scss'
 
 type Props = {
     favoriteArticles: {
         [id: number]: number
     }
-    articlesObject?: {
-        [id: number]: ArticlesProps
-    }
 }
 
-const Menu = ({
-    favoriteArticles,
-    articlesObject = getArticlesObject(articlesArray),
-}: Props) => {
+const Menu = ({ favoriteArticles }: Props) => {
     console.log(favoriteArticles)
     return (
         <nav className="header-nav">
