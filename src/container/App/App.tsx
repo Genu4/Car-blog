@@ -13,25 +13,55 @@ type LikeDataProps = {
     totalPrice: number
 }
 
+type FavoriteArticles = {
+    [id:number]:number
+}
+
 const App = () => {
     const [likeData, setLikeData] = useState<LikeDataProps>({
         totalCount: 10,
         totalPrice: 100,
     })
 
-    const addToFavorites = (total: number, price: number) => {
-        setLikeData((prevState: LikeDataProps) => ({
-            totalCount: prevState.totalCount + total,
-            totalPrice: prevState.totalPrice + total * price,
+    const [favoriteArticles, setFavoritesArticles] = useState<FavoriteArticles>({
+        
+    })
+
+    const addToFavoriteArticles = (id: number, count: number) => {
+        setFavoritesArticles((prevState:FavoriteArticles) =>({
+            ...prevState,
+            [id]: prevState[id] + count
         }))
     }
+
+    const addToFavorites = (id: number, count: number) => {
+        // setLikeData((prevState: LikeDataProps) => ({
+        //     totalCount: prevState.totalCount + total,
+        //     totalPrice: prevState.totalPrice + total * price,
+        // }))
+        setFavoritesArticles((prevState:FavoriteArticles) =>({
+            ...prevState,
+            [id]: prevState[id] + count
+        }))
+    }
+    const removeFromFavorites = (total: number, price: number) => {
+        setLikeData((prevState: LikeDataProps) => ({
+            totalCount: prevState.totalCount - total,
+            totalPrice: prevState.totalPrice - total * price,
+        }))
+    }
+
     return (
         <>
             <StyledEngineProvider injectFirst>
                 {/* <CssBaseline /> */}
-                <Header likeData={likeData} />
+                <Header favoriteArticles={favoriteArticles} />
                 <ScrollToTop />
-                <Main addToFavorites={addToFavorites}/>
+                <Main
+                    addToFavorites={addToFavorites}
+                    addToFavoriteArticles={addToFavoriteArticles}
+                    removeFromFavorites={removeFromFavorites}
+                />
                 <Footer />
                 <ScrollUpBtn />
             </StyledEngineProvider>

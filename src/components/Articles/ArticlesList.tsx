@@ -12,8 +12,12 @@ type ArticlesProps = {
     image: string
 }
 
-type Props = {}
-const ArticlesList = (props: Props) => {
+type Props = { 
+    addToFavoriteArticles: (id: number, count: number) => void 
+    removeFromFavorites: (total: number, price: number) => void 
+}
+
+const ArticlesList = ({ addToFavoriteArticles, removeFromFavorites }: Props) => {
     return (
         <div className="article-list">
             <Grid container direction="row" justifyContent="center" spacing={4}>
@@ -34,6 +38,8 @@ const ArticlesList = (props: Props) => {
                                 author={author}
                                 summary={summary}
                                 image={image}
+                                addToFavoriteArticles={addToFavoriteArticles}
+                                removeFromFavorites={removeFromFavorites}
                             />
                         </Grid>
                     )

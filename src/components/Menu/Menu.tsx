@@ -3,13 +3,13 @@ import './Menu.scss'
 import MenuItem from './MenuItem'
 
 type Props = {
-    likeData: {
-        totalCount: number
-        totalPrice: number
+    favoriteArticles: {
+        [id: number]: number
     }
 }
 
-const Menu = ({ likeData }: Props) => {
+const Menu = ({ favoriteArticles }: Props) => {
+    console.log(favoriteArticles)
     return (
         <nav className="header-nav">
             <ul className="header-nav-list">
@@ -320,9 +320,16 @@ const Menu = ({ likeData }: Props) => {
                     </ul>
                 </li>
                 <li className="header-nav-list-item">
-                    <MenuItem to="/favorites">Favorites:{' '}
-                    <span>{likeData.totalCount}</span>:{' '}
-                    <span>{likeData.totalPrice}</span>
+                    <MenuItem to="/favorites">
+                        Favorites:{' '}
+                        <span>{Object.keys(favoriteArticles).length}: {' '}</span>
+                        <span>
+                            {Object.keys(favoriteArticles).map((articleId) => (
+                                <span key={articleId}>
+                                    {articleId} : {favoriteArticles[parseInt(articleId)]};
+                                </span>
+                            ))}
+                        </span>
                     </MenuItem>
                 </li>
                 <li className="header-nav-list-item">

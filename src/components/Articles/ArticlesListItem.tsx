@@ -1,4 +1,4 @@
-import { Card, CardContent } from '@mui/material'
+import { Button, Card, CardContent } from '@mui/material'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import { Link } from 'react-router-dom'
@@ -14,6 +14,8 @@ type Props = {
     author: string
     summary: string
     image: string
+    addToFavoriteArticles: (id: number, count: number) => void 
+    removeFromFavorites: (total: number, price: number) => void 
 }
 const ArticlesListItem = ({
     id,
@@ -22,8 +24,11 @@ const ArticlesListItem = ({
     author,
     summary,
     image,
+    addToFavoriteArticles,
+    removeFromFavorites,
 }: Props) => {
     const isLiked = useAppSelector((state) => state.likeArticles[id])
+    
     const dispatch = useAppDispatch()
 
     return (
@@ -50,11 +55,12 @@ const ArticlesListItem = ({
                 <div className="article-card-socials">
                     <div className="article-card-socials-block">
                         <button
-                            onClick={() =>
+                            onClick={() => {
                                 isLiked
                                     ? dispatch(removeLike(id))
-                                    : dispatch(addLike(id))
-                            }
+                                    : dispatch(addLike(id));
+                                    addToFavoriteArticles(id,2);    
+                            }}
                             className="article-card-likes"
                         >
                             {isLiked ? (
@@ -63,6 +69,7 @@ const ArticlesListItem = ({
                                 <FavoriteBorderIcon />
                             )}
                         </button>
+                        
                         <a href="/">
                             <button className="article-card-facebook"></button>
                         </a>
@@ -75,6 +82,7 @@ const ArticlesListItem = ({
                         <a href="/">
                             <button className="article-card-email"></button>
                         </a>
+                        <Button onClick={() => removeFromFavorites(2,100)}>Remove From Liked</Button>
                     </div>
                 </div>
             </CardContent>

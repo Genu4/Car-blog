@@ -9,13 +9,17 @@ import { Route, Routes } from 'react-router-dom'
 import ArticlePage from 'pages/ArticlePage/ArticlePage'
 
 
-type Props = {}
-const Main = (props: Props) => {
+type Props = {
+    addToFavoriteArticles:(id:number, count:number) => void
+    removeFromFavorites:(total:number, price:number) => void
+}
+const Main = ({addToFavoriteArticles, removeFromFavorites}: Props) => {
     return (
 
         <div className="container">
             <Routes>
-                <Route path="/" element={<Home />}/>
+                <Route path="/" element={<Home addToFavoriteArticles={addToFavoriteArticles}
+                removeFromFavorites={removeFromFavorites}/>}/>
                 <Route path="deals" element={<Cardeals />}/>
                 <Route path="news" element={<News />}/>
                 <Route path="reviews" element={<Reviews />}/>
@@ -23,7 +27,6 @@ const Main = (props: Props) => {
                 <Route path="about" element={<About />}/>
                 <Route path="contacts" element={<Contacts />}/>
                 <Route path="/article/:id" element={<ArticlePage />}/>
-                
             </Routes>
             
         </div>

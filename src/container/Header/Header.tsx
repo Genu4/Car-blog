@@ -4,13 +4,12 @@ import './Header.scss'
 import Menu from 'components/Menu/Menu'
 
 type Props = {
-    likeData: {
-        totalCount: number
-        totalPrice: number
+    favoriteArticles: {
+        [id:number]:number
     }
 }
 
-const Header = ({ likeData }: Props) => {
+const Header = ({ favoriteArticles }: Props) => {
     return (
         <header>
             <div className="container">
@@ -18,7 +17,7 @@ const Header = ({ likeData }: Props) => {
                     <div className="header-logo">
                         <img src={logo} alt="" />
                     </div>
-                    <Menu likeData={likeData}/>
+                    <Menu favoriteArticles={favoriteArticles}/>
                     <div className="header-search">
                         <div className="search-field-block">
                             <input

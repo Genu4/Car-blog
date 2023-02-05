@@ -1,12 +1,16 @@
 import ArticlesList from 'components/Articles/ArticlesList'
 import Slider from 'components/Swiper/Slider'
 
-type Props = {}
-const Home = (props: Props) => {
+type Props = {
+    addToFavoriteArticles:(id:number, count:number) => void
+    removeFromFavorites:(total:number, price:number) => void
+}
+const Home = ({addToFavoriteArticles, removeFromFavorites}: Props) => {
     return (
         <>
             <Slider />
-            <ArticlesList />
+            <ArticlesList addToFavoriteArticles={addToFavoriteArticles}
+            removeFromFavorites={removeFromFavorites}/>
         </>
     )
 }
