@@ -14,7 +14,7 @@ type Props = {
     author: string
     summary: string
     image: string
-    addToFavoriteArticles: (id: number, count: number) => void 
+    addToFavoriteArticles: (id: number) => void 
     removeFromFavorites: (total: number, price: number) => void 
 }
 const ArticlesListItem = ({
@@ -59,7 +59,7 @@ const ArticlesListItem = ({
                                 isLiked
                                     ? dispatch(removeLike(id))
                                     : dispatch(addLike(id));
-                                    addToFavoriteArticles(id,2);    
+                                    addToFavoriteArticles(id);    
                             }}
                             className="article-card-likes"
                         >

@@ -1,16 +1,23 @@
-import { Link } from 'react-router-dom'
 import './Menu.scss'
 import MenuItem from './MenuItem'
+
+import articlesArray, {
+    ArticlesProps,
+    getArticlesObject,
+} from 'components/Articles/articlesArray'
 
 type Props = {
     favoriteArticles: {
         [id: number]: number
     }
+    articlesObject?: {
+        [id: number]: ArticlesProps
+    }
 }
 
-const Menu = ({ favoriteArticles }: Props) => {
+const Menu = ({ favoriteArticles, articlesObject = getArticlesObject(articlesArray) }: Props) => {
     console.log(favoriteArticles)
-    return (
+    return ( 
         <nav className="header-nav">
             <ul className="header-nav-list">
                 <li className="header-nav-list-item">
@@ -26,7 +33,7 @@ const Menu = ({ favoriteArticles }: Props) => {
                                         <div className="sub-menu-block-car-deals-img-1">
                                             <p className="sub-menu-block-category">
                                                 <a href="/some/valid/uri">
-                                                    Car Deals
+                                                    Deals
                                                 </a>
                                             </p>
                                         </div>
@@ -49,7 +56,7 @@ const Menu = ({ favoriteArticles }: Props) => {
                                         <div className="sub-menu-block-car-deals-img-2">
                                             <p className="sub-menu-block-category">
                                                 <a href="/some/valid/uri">
-                                                    Car Deals
+                                                    Deals
                                                 </a>
                                             </p>
                                         </div>
@@ -72,7 +79,7 @@ const Menu = ({ favoriteArticles }: Props) => {
                                         <div className="sub-menu-block-car-deals-img-3">
                                             <p className="sub-menu-block-category">
                                                 <a href="/some/valid/uri">
-                                                    Car Deals
+                                                    Deals
                                                 </a>
                                             </p>
                                         </div>
@@ -95,7 +102,7 @@ const Menu = ({ favoriteArticles }: Props) => {
                                         <div className="sub-menu-block-car-deals-img-4">
                                             <p className="sub-menu-block-category">
                                                 <a href="/some/valid/uri">
-                                                    Car Deals
+                                                    Deals
                                                 </a>
                                             </p>
                                         </div>
@@ -322,11 +329,12 @@ const Menu = ({ favoriteArticles }: Props) => {
                 <li className="header-nav-list-item">
                     <MenuItem to="/favorites">
                         Favorites:{' '}
-                        <span>{Object.keys(favoriteArticles).length}: {' '}</span>
+                        <span>{Object.keys(favoriteArticles).length}; {' '}</span>
                         <span>
                             {Object.keys(favoriteArticles).map((articleId) => (
                                 <span key={articleId}>
-                                    {articleId} : {favoriteArticles[parseInt(articleId)]};
+                                    {articleId};
+                                    
                                 </span>
                             ))}
                         </span>

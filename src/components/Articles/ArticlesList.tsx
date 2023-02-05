@@ -13,7 +13,7 @@ type ArticlesProps = {
 }
 
 type Props = { 
-    addToFavoriteArticles: (id: number, count: number) => void 
+    addToFavoriteArticles: (id: number) => void 
     removeFromFavorites: (total: number, price: number) => void 
 }
 

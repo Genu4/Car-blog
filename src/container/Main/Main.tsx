@@ -10,10 +10,13 @@ import ArticlePage from 'pages/ArticlePage/ArticlePage'
 
 
 type Props = {
-    addToFavoriteArticles:(id:number, count:number) => void
+    favoriteArticles: {
+        id: number
+    }
+    addToFavoriteArticles:(id:number) => void
     removeFromFavorites:(total:number, price:number) => void
 }
-const Main = ({addToFavoriteArticles, removeFromFavorites}: Props) => {
+const  Main = ({favoriteArticles, addToFavoriteArticles, removeFromFavorites}: Props) => {
     return (
 
         <div className="container">
@@ -23,7 +26,7 @@ const Main = ({addToFavoriteArticles, removeFromFavorites}: Props) => {
                 <Route path="deals" element={<Cardeals />}/>
                 <Route path="news" element={<News />}/>
                 <Route path="reviews" element={<Reviews />}/>
-                <Route path="favorites" element={<Favorites />}/>
+                <Route path="favorites" element={<Favorites favoriteArticles={favoriteArticles}/>}/>
                 <Route path="about" element={<About />}/>
                 <Route path="contacts" element={<Contacts />}/>
                 <Route path="/article/:id" element={<ArticlePage />}/>
