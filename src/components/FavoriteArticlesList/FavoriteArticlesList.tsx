@@ -2,6 +2,7 @@ import articlesArray, {
     getArticlesObject,
     ArticlesProps,
 } from 'components/Articles/articlesArray'
+import { useAppSelector } from 'redux/hooks'
 import FavoriteArticlesListItem from './FavoriteArticlesListItem'
 
 type Props = {
@@ -15,16 +16,17 @@ type Props = {
     ArticlesItem?: any
 }
 const FavoriteArticlesList = ({
+    
     favoriteArticles,
     articlesObject = getArticlesObject(articlesArray),
     removeFromFavorites,
     ArticlesItem = FavoriteArticlesListItem,
 }: Props) => {
-    
-    console.log(favoriteArticles)
+    const favoritesArticles = useAppSelector((state) => state.favoritesArticles)
+    console.log(favoritesArticles)
     return (
         <>
-            {Object.keys(favoriteArticles).map((articleId) => (
+            {Object.keys(favoritesArticles).map((articleId) => (
                 <ArticlesItem
                     key={articleId}
                     removeFromFavorites={removeFromFavorites}

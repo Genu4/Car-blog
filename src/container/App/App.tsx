@@ -34,7 +34,7 @@ const App = () => {
         <>
             <StyledEngineProvider injectFirst>
                 {/* <CssBaseline /> */}
-                <Header favoriteArticles={favoriteArticles} />
+                <Header />
                 <ScrollToTop />
                 <Main
                     favoriteArticles={favoriteArticles}

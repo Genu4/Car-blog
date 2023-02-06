@@ -4,12 +4,12 @@ import './Menu.scss'
 import { useAppSelector } from 'redux/hooks'
 
 type Props = {
-    favoriteArticles: {
+    favoriteArticles?: {
         [id: number]: number
     }
 }
 
-const Menu = ({ favoriteArticles }: Props) => {
+const Menu = () => {
     
     const favoritesArticles = useAppSelector((state) => state.favoritesArticles)
     return (

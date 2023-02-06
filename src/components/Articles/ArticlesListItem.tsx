@@ -6,6 +6,7 @@ import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { addLike, removeLike } from 'redux/likeReducer'
 
 import './ArticlesListItem.scss'
+import { addArticleToFavorites } from 'redux/favoriteArticleReducer'
 
 type Props = {
     id: number
@@ -59,7 +60,7 @@ const ArticlesListItem = ({
                                 isLiked
                                     ? dispatch(removeLike(id))
                                     : dispatch(addLike(id));
-                                    addToFavoriteArticles(id);    
+                                    dispatch(addArticleToFavorites(id))    
                             }}
                             className="article-card-likes"
                         >

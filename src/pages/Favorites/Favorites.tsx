@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material'
 import FavoriteArticlesList from 'components/FavoriteArticlesList/FavoriteArticlesList'
-import { useAppSelector } from 'redux/hooks'
+
 import './Favorites.scss'
 
 type Props = {
@@ -12,7 +12,7 @@ type Props = {
 }
 
 const Favorites = ({ favoriteArticles, removeFromFavorites }: Props) => {
-    const favoritesArticles = useAppSelector((state) => state.favoritesArticles)
+    
     return (
         <div className="favorites-content">
             <h1 className="favorites-header">Favorites</h1>

@@ -7,6 +7,7 @@ type LikesArticlesState = {
 export const initialState:LikesArticlesState = {
     1: true,
     3: true,
+    8: true,
 }
 
 export const favoriteSlice = createSlice({

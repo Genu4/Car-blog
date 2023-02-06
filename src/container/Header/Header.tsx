@@ -3,13 +3,9 @@ import logo from './images/carbloglogo.png'
 import './Header.scss'
 import Menu from 'components/Menu/Menu'
 
-type Props = {
-    favoriteArticles: {
-        [id:number]:number
-    }
-}
 
-const Header = ({ favoriteArticles }: Props) => {
+
+const Header = () => {
     return (
         <header>
             <div className="container">
@@ -17,7 +13,7 @@ const Header = ({ favoriteArticles }: Props) => {
                     <div className="header-logo">
                         <img src={logo} alt="" />
                     </div>
-                    <Menu favoriteArticles={favoriteArticles}/>
+                    <Menu />
                     <div className="header-search">
                         <div className="search-field-block">
                             <input
