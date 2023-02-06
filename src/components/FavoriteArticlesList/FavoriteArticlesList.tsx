@@ -20,6 +20,7 @@ const FavoriteArticlesList = ({
     removeFromFavorites,
     ArticlesItem = FavoriteArticlesListItem,
 }: Props) => {
+    
     console.log(favoriteArticles)
     return (
         <>

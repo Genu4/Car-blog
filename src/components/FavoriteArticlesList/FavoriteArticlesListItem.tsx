@@ -86,7 +86,7 @@ const FavoriteArticlesListItem = ({
                                 variant="outlined"
                                 onClick={() => removeFromFavorites(article.id)}
                             >
-                                Remove From Liked
+                                Del
                             </Button>
                         </div>
                     </div>

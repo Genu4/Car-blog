@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
+import favoriteArticleReducer from './favoriteArticleReducer'
 import likeReducer from './likeReducer'
 
 export const store = configureStore({
     reducer: {
-        likeArticles: likeReducer
+        likeArticles: likeReducer,
+        favoritesArticles: favoriteArticleReducer
     }
 })
 

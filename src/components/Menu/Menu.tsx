@@ -1,6 +1,7 @@
 import MenuItem from './MenuItem'
 
 import './Menu.scss'
+import { useAppSelector } from 'redux/hooks'
 
 type Props = {
     favoriteArticles: {
@@ -9,7 +10,8 @@ type Props = {
 }
 
 const Menu = ({ favoriteArticles }: Props) => {
-    console.log(favoriteArticles)
+    
+    const favoritesArticles = useAppSelector((state) => state.favoritesArticles)
     return (
         <nav className="header-nav">
             <ul className="header-nav-list">
@@ -322,7 +324,8 @@ const Menu = ({ favoriteArticles }: Props) => {
                 <li className="header-nav-list-item">
                     <MenuItem to="/favorites">
                         Favorites:{' '}
-                        <span>{Object.keys(favoriteArticles).length}</span>
+                        {/* <span>{Object.keys(favoriteArticles).length}</span> */}
+                        <span>{Object.keys(favoritesArticles).length}</span>
                     </MenuItem>
                 </li>
                 <li className="header-nav-list-item">
