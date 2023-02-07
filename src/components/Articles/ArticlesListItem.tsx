@@ -4,9 +4,10 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import { Link } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { addLike, removeLike } from 'redux/likeReducer'
+import { addArticleToFavorites, removeArticleFromFavorites } from 'redux/favoriteArticleReducer'
 
 import './ArticlesListItem.scss'
-import { addArticleToFavorites } from 'redux/favoriteArticleReducer'
+
 
 type Props = {
     id: number
@@ -59,7 +60,7 @@ const ArticlesListItem = ({
                                 isLiked
                                     ? dispatch(removeLike(id))
                                     : dispatch(addLike(id))
-                                dispatch(addArticleToFavorites(id))
+                                dispatch(addArticleToFavorites({id}))
                             }}
                             className="article-card-likes"
                         >
@@ -85,13 +86,7 @@ const ArticlesListItem = ({
                     </div>
                     <Button
                         variant="outlined"
-                        onClick={() => dispatch(addArticleToFavorites({id}))}
-                    >
-                        Add to fav
-                    </Button>
-                    <Button
-                        variant="outlined"
-                        onClick={() => removeFromFavorites(id)}
+                        onClick={() => dispatch(removeArticleFromFavorites(id))}
                     >
                         Remove From Fav
                     </Button>

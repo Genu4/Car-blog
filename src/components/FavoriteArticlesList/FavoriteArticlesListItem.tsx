@@ -8,6 +8,7 @@ import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { addLike, removeLike } from 'redux/likeReducer'
 
 import './FavoriteArticlesListItem.scss'
+import { removeArticleFromFavorites } from 'redux/favoriteArticleReducer'
 
 type Props = {
     article: ArticlesProps
@@ -58,8 +59,7 @@ const FavoriteArticlesListItem = ({
                         onClick={() => {
                             isLiked
                                 ? dispatch(removeLike(article.id))
-                                : dispatch(addLike(article.id));
-                                addToFavoriteArticles(article.id);    
+                                : dispatch(addLike(article.id));   
                         }}
                         className="article-card-likes"
                     >
@@ -84,7 +84,7 @@ const FavoriteArticlesListItem = ({
                             </a>
                             <Button
                                 variant="outlined"
-                                onClick={() => removeFromFavorites(article.id)}
+                                onClick={() => dispatch(removeArticleFromFavorites(article.id))}
                             >
                                 Del
                             </Button>
