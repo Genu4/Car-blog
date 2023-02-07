@@ -21,7 +21,7 @@ const FavoriteArticlesListItem = ({
 }: Props) => {
     const isLiked = useAppSelector((state) => state.likeArticles[article.id])
     const dispatch = useAppDispatch()
-
+    
     return (
         <Grid item xs={12} sm={6} lg={4}>
             <Card className="favorite-article-card-item">

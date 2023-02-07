@@ -1,14 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 type LikesArticlesState = {
-    [id: number]: boolean
+    [id: number]: number
 }
 
-export const initialState:LikesArticlesState = {
-    1: true,
-    3: true,
-    8: true,
-}
+export const initialState:LikesArticlesState = {}
 
 export const favoriteSlice = createSlice({
     name: "favoritesArticles",
@@ -17,7 +13,7 @@ export const favoriteSlice = createSlice({
         
         addArticleToFavorites: (prevState,action) => ({
             ...prevState,
-            [action.payload.id]:prevState[action.payload.id]
+            [action.payload.id]:(prevState[action.payload.id] || 0)
         })
     }
 })

@@ -15,8 +15,8 @@ type Props = {
     author: string
     summary: string
     image: string
-    addToFavoriteArticles: (id: number) => void 
-    removeFromFavorites: (id: number) => void 
+    addToFavoriteArticles: (id: number) => void
+    removeFromFavorites: (id: number) => void
 }
 const ArticlesListItem = ({
     id,
@@ -29,7 +29,6 @@ const ArticlesListItem = ({
     removeFromFavorites,
 }: Props) => {
     const isLiked = useAppSelector((state) => state.likeArticles[id])
-    
     const dispatch = useAppDispatch()
 
     return (
@@ -59,8 +58,8 @@ const ArticlesListItem = ({
                             onClick={() => {
                                 isLiked
                                     ? dispatch(removeLike(id))
-                                    : dispatch(addLike(id));
-                                    dispatch(addArticleToFavorites(id))    
+                                    : dispatch(addLike(id))
+                                dispatch(addArticleToFavorites(id))
                             }}
                             className="article-card-likes"
                         >
@@ -70,7 +69,7 @@ const ArticlesListItem = ({
                                 <FavoriteBorderIcon />
                             )}
                         </button>
-                        
+
                         <a href="/">
                             <button className="article-card-facebook"></button>
                         </a>
@@ -83,8 +82,19 @@ const ArticlesListItem = ({
                         <a href="/">
                             <button className="article-card-email"></button>
                         </a>
-                        <Button variant='outlined' onClick={() => removeFromFavorites(id)}>Remove From Liked</Button>
                     </div>
+                    <Button
+                        variant="outlined"
+                        onClick={() => dispatch(addArticleToFavorites({id}))}
+                    >
+                        Add to fav
+                    </Button>
+                    <Button
+                        variant="outlined"
+                        onClick={() => removeFromFavorites(id)}
+                    >
+                        Remove From Fav
+                    </Button>
                 </div>
             </CardContent>
         </Card>

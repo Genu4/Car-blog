@@ -10,7 +10,6 @@ type Props = {
 }
 
 const Menu = () => {
-    
     const favoritesArticles = useAppSelector((state) => state.favoritesArticles)
     return (
         <nav className="header-nav">
@@ -324,7 +323,6 @@ const Menu = () => {
                 <li className="header-nav-list-item">
                     <MenuItem to="/favorites">
                         Favorites:{' '}
-                        {/* <span>{Object.keys(favoriteArticles).length}</span> */}
                         <span>{Object.keys(favoritesArticles).length}</span>
                     </MenuItem>
                 </li>
