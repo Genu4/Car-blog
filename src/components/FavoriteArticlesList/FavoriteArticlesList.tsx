@@ -23,7 +23,7 @@ const FavoriteArticlesList = ({
     ArticlesItem = FavoriteArticlesListItem,
 }: Props) => {
     const favoritesArticles = useAppSelector((state) => state.favoritesArticles)
-    console.log(favoritesArticles)
+    
     return (
         <>
             {Object.keys(favoritesArticles).map((articleId) => (

@@ -8,7 +8,7 @@ import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { addLike, removeLike } from 'redux/likeReducer'
 
 import './FavoriteArticlesListItem.scss'
-import { removeArticleFromFavorites } from 'redux/favoriteArticleReducer'
+import { addArticleToFavorites, removeArticleFromFavorites } from 'redux/favoriteArticleReducer'
 
 type Props = {
     article: ArticlesProps
@@ -24,6 +24,7 @@ const FavoriteArticlesListItem = ({
     const dispatch = useAppDispatch()
     
     return (
+        
         <Grid item xs={12} sm={6} lg={4}>
             <Card className="favorite-article-card-item">
                 <CardContent>
@@ -57,9 +58,13 @@ const FavoriteArticlesListItem = ({
                         <div className="article-card-socials-block">
                             <button
                         onClick={() => {
-                            isLiked
-                                ? dispatch(removeLike(article.id))
-                                : dispatch(addLike(article.id));   
+                              
+                                isLiked
+                                    ? dispatch(removeLike(article.id))
+                                    : dispatch(addLike(article.id));
+                                    isLiked
+                                    ? dispatch(removeArticleFromFavorites(article.id))
+                                    : dispatch(addArticleToFavorites(null)) 
                         }}
                         className="article-card-likes"
                     >
@@ -82,12 +87,6 @@ const FavoriteArticlesListItem = ({
                             <a href="/">
                                 <button className="article-card-email"></button>
                             </a>
-                            <Button
-                                variant="outlined"
-                                onClick={() => dispatch(removeArticleFromFavorites(article.id))}
-                            >
-                                Del
-                            </Button>
                         </div>
                     </div>
                 </CardContent>

@@ -11,6 +11,7 @@ type Props = {
 
 const Menu = () => {
     const favoritesArticles = useAppSelector((state) => state.favoritesArticles)
+    console.log(favoritesArticles)
     return (
         <nav className="header-nav">
             <ul className="header-nav-list">
