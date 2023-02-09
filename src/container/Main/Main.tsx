@@ -7,6 +7,7 @@ import News from 'pages/News/News'
 import Reviews from 'pages/Reviews/Reviews'
 import { Route, Routes } from 'react-router-dom'
 import ArticlePage from 'pages/ArticlePage/ArticlePage'
+import Error from 'pages/Error/Error'
 
 
 const  Main = () => {
@@ -22,6 +23,7 @@ const  Main = () => {
                 <Route path="about" element={<About />}/>
                 <Route path="contacts" element={<Contacts />}/>
                 <Route path="/article/:id" element={<ArticlePage />}/>
+                <Route path="/error" element={<Error />}/>
             </Routes>
             
         </div>

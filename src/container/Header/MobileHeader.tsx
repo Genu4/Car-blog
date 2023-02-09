@@ -6,11 +6,14 @@ import Drawer from '@mui/material/Drawer'
 import Button from '@mui/material/Button'
 import List from '@mui/material/List'
 import MenuItem from 'components/Menu/MenuItem'
+import { useAppSelector } from 'redux/hooks'
+import { Link } from 'react-router-dom'
 
 type Anchor = 'left'
 
 type Props = {}
 const MobileHeader = (props: Props) => {
+    const favoritesArticles = useAppSelector((state) => state.favoritesArticles)
     const [state, setState] = React.useState({
         left: false,
     })
@@ -46,42 +49,38 @@ const MobileHeader = (props: Props) => {
                     </Button>
                 </div>
                 <div className="mobile-nav-socials">
-                    <a className="mobile-nav-social fa-facebook" href="#"></a>
-                    <a className="mobile-nav-social fa-twitter" href="#"></a>
-                    <a className="mobile-nav-social fa-instagram" href="#"></a>
-                    <a className="mobile-nav-social fa-pinterest" href="#"></a>
-                    <a className="mobile-nav-social fa-youtube" href="#"></a>
-                    <a className="mobile-nav-social fa-email" href="#"></a>
+                    <Link className="mobile-nav-social fa-facebook" to={"/error"}></Link>
+                    <Link className="mobile-nav-social fa-twitter" to={"/error"}></Link>
+                    <Link className="mobile-nav-social fa-instagram" to={"/error"}></Link>
+                    <Link className="mobile-nav-social fa-pinterest" to={"/error"}></Link>
+                    <Link className="mobile-nav-social fa-youtube" to={"/error"}></Link>
+                    <Link className="mobile-nav-social fa-email" to={"/error"}></Link>
                 </div>
                 <div className="line"></div>
                 <ul className="mobile-nav-list">
                     <li className="mobile-nav-list-item">
                         <MenuItem to="/">Home</MenuItem>
-                        
                     </li>
                     <li className="mobile-nav-list-item">
-                        <MenuItem to="/car-deals">Car Deals</MenuItem>
-                        
+                        <MenuItem to="/deals">Deals</MenuItem>
                     </li>
                     <li className="mobile-nav-list-item">
                         <MenuItem to="/news">News</MenuItem>
-                        
                     </li>
                     <li className="mobile-nav-list-item">
                         <MenuItem to="/reviews">Reviews</MenuItem>
-                        
                     </li>
                     <li className="mobile-nav-list-item">
-                        <MenuItem to="/favorites">Favorites</MenuItem>
-                        
+                        <MenuItem to="/favorites">
+                            Favorites:{' '}
+                            <span>{Object.keys(favoritesArticles).length}</span>
+                        </MenuItem>
                     </li>
                     <li className="mobile-nav-list-item">
                         <MenuItem to="/about">About</MenuItem>
-                        
                     </li>
                     <li className="mobile-nav-list-item">
                         <MenuItem to="/contacts">Contacts</MenuItem>
-                        
                     </li>
                 </ul>
             </List>

@@ -1,17 +1,11 @@
 import MenuItem from './MenuItem'
-
-import './Menu.scss'
 import { useAppSelector } from 'redux/hooks'
 
-type Props = {
-    favoriteArticles?: {
-        [id: number]: number
-    }
-}
+import './Menu.scss'
 
 const Menu = () => {
     const favoritesArticles = useAppSelector((state) => state.favoritesArticles)
-    console.log(favoritesArticles)
+    
     return (
         <nav className="header-nav">
             <ul className="header-nav-list">
