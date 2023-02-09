@@ -8,7 +8,10 @@ import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { addLike, removeLike } from 'redux/likeReducer'
 
 import './FavoriteArticlesListItem.scss'
-import { addArticleToFavorites, removeArticleFromFavorites } from 'redux/favoriteArticleReducer'
+import {
+    addArticleToFavorites,
+    removeArticleFromFavorites,
+} from 'redux/favoriteArticleReducer'
 
 type Props = {
     article: ArticlesProps
@@ -22,9 +25,8 @@ const FavoriteArticlesListItem = ({
 }: Props) => {
     const isLiked = useAppSelector((state) => state.likeArticles[article.id])
     const dispatch = useAppDispatch()
-    
+
     return (
-        
         <Grid item xs={12} sm={6} lg={4}>
             <Card className="favorite-article-card-item">
                 <CardContent>
@@ -57,36 +59,42 @@ const FavoriteArticlesListItem = ({
                     <div className="article-card-socials">
                         <div className="article-card-socials-block">
                             <button
-                        onClick={() => {
-                              
-                                isLiked
-                                    ? dispatch(removeLike(article.id))
-                                    : dispatch(addLike(article.id));
+                                onClick={() => {
                                     isLiked
-                                    ? dispatch(removeArticleFromFavorites(article.id))
-                                    : dispatch(addArticleToFavorites(null)) 
-                        }}
-                        className="article-card-likes"
-                    >
-                        {isLiked ? (
-                            <FavoriteIcon />
-                        ) : (
-                            <FavoriteBorderIcon />
-                        )}
-                    </button>
-
-                            <a href="/">
-                                <button className="article-card-facebook"></button>
-                            </a>
-                            <a href="/">
-                                <button className="article-card-twitter"></button>
-                            </a>
-                            <a href="/">
-                                <button className="article-card-pinterest"></button>
-                            </a>
-                            <a href="/">
-                                <button className="article-card-email"></button>
-                            </a>
+                                        ? dispatch(removeLike(article.id))
+                                        : dispatch(addLike(article.id))
+                                    isLiked
+                                        ? dispatch(
+                                              removeArticleFromFavorites(
+                                                  article.id
+                                              )
+                                          )
+                                        : dispatch(addArticleToFavorites(null))
+                                }}
+                                className="article-card-likes"
+                            >
+                                {isLiked ? (
+                                    <FavoriteIcon />
+                                ) : (
+                                    <FavoriteBorderIcon />
+                                )}
+                            </button>
+                            <Link
+                                className="article-card-facebook"
+                                to={'/error'}
+                            ></Link>
+                            <Link
+                                className="article-card-twitter"
+                                to={'/error'}
+                            ></Link>
+                            <Link
+                                className="article-card-pinterest"
+                                to={'/error'}
+                            ></Link>
+                            <Link
+                                className="article-card-email"
+                                to={'/error'}
+                            ></Link>
                         </div>
                     </div>
                 </CardContent>

@@ -28,7 +28,7 @@ const ArticlesListItem = ({
     image,
 }: Props) => {
     const isLiked = useAppSelector((state) => state.likeArticles[id])
-    
+
     const dispatch = useAppDispatch()
 
     return (
@@ -58,8 +58,8 @@ const ArticlesListItem = ({
                             onClick={() => {
                                 isLiked
                                     ? dispatch(removeLike(id))
-                                    : dispatch(addLike(id));
-                                    isLiked
+                                    : dispatch(addLike(id))
+                                isLiked
                                     ? dispatch(removeArticleFromFavorites(id))
                                     : dispatch(addArticleToFavorites({ id }))
                             }}
@@ -71,19 +71,22 @@ const ArticlesListItem = ({
                                 <FavoriteBorderIcon />
                             )}
                         </button>
-
-                        <a href="/">
-                            <button className="article-card-facebook"></button>
-                        </a>
-                        <a href="/">
-                            <button className="article-card-twitter"></button>
-                        </a>
-                        <a href="/">
-                            <button className="article-card-pinterest"></button>
-                        </a>
-                        <a href="/">
-                            <button className="article-card-email"></button>
-                        </a>
+                        <Link
+                            className="article-card-facebook"
+                            to={'/error'}
+                        ></Link>
+                        <Link
+                            className="article-card-twitter"
+                            to={'/error'}
+                        ></Link>
+                        <Link
+                            className="article-card-pinterest"
+                            to={'/error'}
+                        ></Link>
+                        <Link
+                            className="article-card-email"
+                            to={'/error'}
+                        ></Link>
                     </div>
                 </div>
             </CardContent>
