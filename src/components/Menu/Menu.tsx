@@ -1,11 +1,12 @@
 import MenuItem from './MenuItem'
 import { useAppSelector } from 'redux/hooks'
+import { Link } from 'react-router-dom'
 
 import './Menu.scss'
 
 const Menu = () => {
     const favoritesArticles = useAppSelector((state) => state.favoritesArticles)
-    
+
     return (
         <nav className="header-nav">
             <ul className="header-nav-list">
@@ -18,22 +19,20 @@ const Menu = () => {
                         <li className="sub-menu-item">
                             <div className="sub-menu-item-link-blocks">
                                 <div className="sub-menu-block">
-                                    <a href="/some/valid/uri">
+                                    <Link to="/article/1">
                                         <div className="sub-menu-block-car-deals-img-1">
                                             <p className="sub-menu-block-category">
-                                                <a href="/some/valid/uri">
-                                                    Deals
-                                                </a>
+                                                <Link to="/deals">Deals</Link>
                                             </p>
                                         </div>
-                                    </a>
+                                    </Link>
 
                                     <div className="sub-menu-block-content">
                                         <h3 className="sub-menu-block-header">
-                                            <a href="/some/valid/uri">
+                                            <Link to="/article/1">
                                                 CAR DEALERS ARE SLASHING PRICES
                                                 AS MARKET SLOWS
-                                            </a>
+                                            </Link>
                                         </h3>
                                         <p className="sub-menu-block-date">
                                             December 2022
@@ -44,9 +43,7 @@ const Menu = () => {
                                     <a href="/some/valid/uri">
                                         <div className="sub-menu-block-car-deals-img-2">
                                             <p className="sub-menu-block-category">
-                                                <a href="/some/valid/uri">
-                                                    Deals
-                                                </a>
+                                                <Link to="/deals">Deals</Link>
                                             </p>
                                         </div>
                                     </a>
@@ -67,9 +64,7 @@ const Menu = () => {
                                     <a href="/some/valid/uri">
                                         <div className="sub-menu-block-car-deals-img-3">
                                             <p className="sub-menu-block-category">
-                                                <a href="/some/valid/uri">
-                                                    Deals
-                                                </a>
+                                                <Link to="/deals">Deals</Link>
                                             </p>
                                         </div>
                                     </a>
@@ -90,9 +85,7 @@ const Menu = () => {
                                     <a href="/some/valid/uri">
                                         <div className="sub-menu-block-car-deals-img-4">
                                             <p className="sub-menu-block-category">
-                                                <a href="/some/valid/uri">
-                                                    Deals
-                                                </a>
+                                                <Link to="/deals">Deals</Link>
                                             </p>
                                         </div>
                                     </a>
@@ -122,9 +115,7 @@ const Menu = () => {
                                     <a href="/some/valid/uri">
                                         <div className="sub-menu-block-news-img-1">
                                             <p className="sub-menu-block-category">
-                                                <a href="/some/valid/uri">
-                                                    News
-                                                </a>
+                                                <Link to="/news">News</Link>
                                             </p>
                                         </div>
                                     </a>
@@ -145,9 +136,7 @@ const Menu = () => {
                                     <a href="/some/valid/uri">
                                         <div className="sub-menu-block-news-img-2">
                                             <p className="sub-menu-block-category">
-                                                <a href="/some/valid/uri">
-                                                    News
-                                                </a>
+                                                <Link to="/news">News</Link>
                                             </p>
                                         </div>
                                     </a>
@@ -168,9 +157,7 @@ const Menu = () => {
                                     <a href="/some/valid/uri">
                                         <div className="sub-menu-block-news-img-3">
                                             <p className="sub-menu-block-category">
-                                                <a href="/some/valid/uri">
-                                                    News
-                                                </a>
+                                                <Link to="/news">News</Link>
                                             </p>
                                         </div>
                                     </a>
@@ -191,9 +178,7 @@ const Menu = () => {
                                     <a href="/some/valid/uri">
                                         <div className="sub-menu-block-news-img-4">
                                             <p className="sub-menu-block-category">
-                                                <a href="/some/valid/uri">
-                                                    News
-                                                </a>
+                                                <Link to="/news">News</Link>
                                             </p>
                                         </div>
                                     </a>
@@ -223,9 +208,9 @@ const Menu = () => {
                                     <a href="/some/valid/uri">
                                         <div className="sub-menu-block-reviews-img-1">
                                             <p className="sub-menu-block-category">
-                                                <a href="/some/valid/uri">
+                                                <Link to="/reviews">
                                                     Reviews
-                                                </a>
+                                                </Link>
                                             </p>
                                         </div>
                                     </a>
@@ -246,9 +231,9 @@ const Menu = () => {
                                     <a href="/some/valid/uri">
                                         <div className="sub-menu-block-reviews-img-2">
                                             <p className="sub-menu-block-category">
-                                                <a href="/some/valid/uri">
+                                                <Link to="/reviews">
                                                     Reviews
-                                                </a>
+                                                </Link>
                                             </p>
                                         </div>
                                     </a>
@@ -269,9 +254,9 @@ const Menu = () => {
                                     <a href="/some/valid/uri">
                                         <div className="sub-menu-block-reviews-img-3">
                                             <p className="sub-menu-block-category">
-                                                <a href="/some/valid/uri">
+                                                <Link to="/reviews">
                                                     Reviews
-                                                </a>
+                                                </Link>
                                             </p>
                                         </div>
                                     </a>
@@ -292,9 +277,9 @@ const Menu = () => {
                                     <a href="/some/valid/uri">
                                         <div className="sub-menu-block-reviews-img-4">
                                             <p className="sub-menu-block-category">
-                                                <a href="/some/valid/uri">
+                                                <Link to="/reviews">
                                                     Reviews
-                                                </a>
+                                                </Link>
                                             </p>
                                         </div>
                                     </a>
