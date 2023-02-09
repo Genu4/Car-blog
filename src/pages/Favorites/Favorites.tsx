@@ -3,25 +3,14 @@ import FavoriteArticlesList from 'components/FavoriteArticlesList/FavoriteArticl
 
 import './Favorites.scss'
 
-type Props = {
-    favoriteArticles: {
-        [id: number]: number
-    }
-
-    removeFromFavorites: (id: number) => void
-}
-
-const Favorites = ({ favoriteArticles, removeFromFavorites }: Props) => {
+const Favorites = () => {
     
     return (
         <div className="favorites-content">
             <h1 className="favorites-header">Favorites</h1>
             <div>
                 <Grid container spacing={4}>
-                    <FavoriteArticlesList
-                        favoriteArticles={favoriteArticles}
-                        removeFromFavorites={removeFromFavorites}
-                    />
+                    <FavoriteArticlesList />
                 </Grid>
             </div>
         </div>

@@ -9,23 +9,16 @@ import { Route, Routes } from 'react-router-dom'
 import ArticlePage from 'pages/ArticlePage/ArticlePage'
 
 
-type Props = {
-    favoriteArticles: {
-        [id: number]:number
-    }
-    addToFavoriteArticles:(id:number) => void
-    removeFromFavorites:(id:number) => void
-}
-const  Main = ({favoriteArticles, addToFavoriteArticles, removeFromFavorites}: Props) => {
+const  Main = () => {
     return (
 
         <div className="container">
             <Routes>
-                <Route path="/" element={<Home addToFavoriteArticles={addToFavoriteArticles} removeFromFavorites={removeFromFavorites}/>}/>
-                <Route path="deals" element={<Deals addToFavoriteArticles={addToFavoriteArticles} removeFromFavorites={removeFromFavorites}/>}/>
-                <Route path="news" element={<News addToFavoriteArticles={addToFavoriteArticles} removeFromFavorites={removeFromFavorites}/>}/>
-                <Route path="reviews" element={<Reviews addToFavoriteArticles={addToFavoriteArticles} removeFromFavorites={removeFromFavorites}/>}/>
-                <Route path="favorites" element={<Favorites favoriteArticles={favoriteArticles} removeFromFavorites={removeFromFavorites}/>}/>
+                <Route path="/" element={<Home />}/>
+                <Route path="deals" element={<Deals />}/>
+                <Route path="news" element={<News />}/>
+                <Route path="reviews" element={<Reviews />}/>
+                <Route path="favorites" element={<Favorites />}/>
                 <Route path="about" element={<About />}/>
                 <Route path="contacts" element={<Contacts />}/>
                 <Route path="/article/:id" element={<ArticlePage />}/>

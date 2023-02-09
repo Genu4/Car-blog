@@ -18,8 +18,6 @@ type Props = {
     author: string
     summary: string
     image: string
-    addToFavoriteArticles: (id: number) => void
-    removeFromFavorites: (id: number) => void
 }
 const ArticlesListItem = ({
     id,
@@ -28,8 +26,6 @@ const ArticlesListItem = ({
     author,
     summary,
     image,
-    addToFavoriteArticles,
-    removeFromFavorites,
 }: Props) => {
     const isLiked = useAppSelector((state) => state.likeArticles[id])
     

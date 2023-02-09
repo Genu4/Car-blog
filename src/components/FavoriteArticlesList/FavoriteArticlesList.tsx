@@ -6,31 +6,24 @@ import { useAppSelector } from 'redux/hooks'
 import FavoriteArticlesListItem from './FavoriteArticlesListItem'
 
 type Props = {
-    favoriteArticles: {
-        [id: number]: number
-    }
     articlesObject?: {
         [id: number]: ArticlesProps
     }
-    removeFromFavorites: (id: number) => void
+
     ArticlesItem?: any
 }
 const FavoriteArticlesList = ({
-    
-    favoriteArticles,
     articlesObject = getArticlesObject(articlesArray),
-    removeFromFavorites,
     ArticlesItem = FavoriteArticlesListItem,
 }: Props) => {
     const favoritesArticles = useAppSelector((state) => state.favoritesArticles)
-    
+
     return (
         <>
             {Object.keys(favoritesArticles).map((articleId) => (
                 <ArticlesItem
                     key={articleId}
                     favoritesArticles={favoritesArticles}
-                    removeFromFavorites={removeFromFavorites}
                     article={articlesObject[parseInt(articleId)]}
                 />
             ))}
