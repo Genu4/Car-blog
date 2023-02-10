@@ -2,6 +2,7 @@ import './Menu.scss'
 import MenuItem from './MenuItem'
 import { useAppSelector } from 'redux/hooks'
 import { Link } from 'react-router-dom'
+import SubMenuDeals from 'components/SubMenuDeals/SubMenuDealsList'
 
 const Menu = () => {
     const favoritesArticles = useAppSelector((state) => state.favoritesArticles)
@@ -16,92 +17,7 @@ const Menu = () => {
                     <MenuItem to="/deals">Deals</MenuItem>
                     <ul className="sub-menu">
                         <li className="sub-menu-item">
-                            <div className="sub-menu-item-link-blocks">
-                                <div className="sub-menu-block">
-                                    <Link to="/article/1">
-                                        <div className="sub-menu-block-car-deals-img-1">
-                                            <p className="sub-menu-block-category">
-                                                <Link to="/deals">Deals</Link>
-                                            </p>
-                                        </div>
-                                    </Link>
-
-                                    <div className="sub-menu-block-content">
-                                        <h3 className="sub-menu-block-header">
-                                            <Link to="/article/1">
-                                                CAR DEALERS ARE SLASHING PRICES
-                                                AS MARKET SLOWS
-                                            </Link>
-                                        </h3>
-                                        <p className="sub-menu-block-date">
-                                            December 2022
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="sub-menu-block">
-                                    <a href="/some/valid/uri">
-                                        <div className="sub-menu-block-car-deals-img-2">
-                                            <p className="sub-menu-block-category">
-                                                <Link to="/deals">Deals</Link>
-                                            </p>
-                                        </div>
-                                    </a>
-
-                                    <div className="sub-menu-block-content">
-                                        <h3 className="sub-menu-block-header">
-                                            <a href="/some/valid/uri">
-                                                ‘BEST-EVER NEW CAR DEALS
-                                                AVAILABLE’ AS SALES FALL
-                                            </a>
-                                        </h3>
-                                        <p className="sub-menu-block-date">
-                                            December 2022
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="sub-menu-block">
-                                    <a href="/some/valid/uri">
-                                        <div className="sub-menu-block-car-deals-img-3">
-                                            <p className="sub-menu-block-category">
-                                                <Link to="/deals">Deals</Link>
-                                            </p>
-                                        </div>
-                                    </a>
-
-                                    <div className="sub-menu-block-content">
-                                        <h3 className="sub-menu-block-header">
-                                            <a href="/some/valid/uri">
-                                                CASH IN ON THE BEST CAR DEALS
-                                                RIGHT NOW
-                                            </a>
-                                        </h3>
-                                        <p className="sub-menu-block-date">
-                                            December 2022
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="sub-menu-block">
-                                    <a href="/some/valid/uri">
-                                        <div className="sub-menu-block-car-deals-img-4">
-                                            <p className="sub-menu-block-category">
-                                                <Link to="/deals">Deals</Link>
-                                            </p>
-                                        </div>
-                                    </a>
-
-                                    <div className="sub-menu-block-content">
-                                        <h3 className="sub-menu-block-header">
-                                            <a href="/some/valid/uri">
-                                                NEW CAR DEALS FOR EVERY TYPE OF
-                                                BUYER
-                                            </a>
-                                        </h3>
-                                        <p className="sub-menu-block-date">
-                                            December 2022
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <SubMenuDeals />
                         </li>
                     </ul>
                 </li>
