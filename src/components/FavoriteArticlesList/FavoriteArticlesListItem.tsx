@@ -12,6 +12,7 @@ import {
     addArticleToFavorites,
     removeArticleFromFavorites,
 } from 'redux/favoriteArticleReducer'
+import Socials from 'components/Socials/Socials'
 
 type Props = {
     article: ArticlesProps
@@ -19,9 +20,7 @@ type Props = {
     removeFromFavorites: (id: number) => void
 }
 const FavoriteArticlesListItem = ({
-    article,
-    addToFavoriteArticles,
-    removeFromFavorites,
+    article
 }: Props) => {
     const isLiked = useAppSelector((state) => state.likeArticles[article.id])
     const dispatch = useAppDispatch()
@@ -42,7 +41,7 @@ const FavoriteArticlesListItem = ({
                         </Link>
                     </div>
                     <h2 className="article-card-title">
-                        <Link to={`/article/${article.id}`}>
+                        <Link className="article-card-title-text" to={`/article/${article.id}`}>
                             {article.title}
                         </Link>
                     </h2>
@@ -58,43 +57,24 @@ const FavoriteArticlesListItem = ({
                     </div>
                     <div className="article-card-socials">
                         <div className="article-card-socials-block">
-                            <button
-                                onClick={() => {
-                                    isLiked
-                                        ? dispatch(removeLike(article.id))
-                                        : dispatch(addLike(article.id))
-                                    isLiked
-                                        ? dispatch(
-                                              removeArticleFromFavorites(
-                                                  article.id
-                                              )
-                                          )
-                                        : dispatch(addArticleToFavorites(null))
-                                }}
-                                className="article-card-likes"
-                            >
-                                {isLiked ? (
-                                    <FavoriteIcon />
-                                ) : (
-                                    <FavoriteBorderIcon />
-                                )}
-                            </button>
-                            <Link
-                                className="article-card-facebook"
-                                to={'/error'}
-                            ></Link>
-                            <Link
-                                className="article-card-twitter"
-                                to={'/error'}
-                            ></Link>
-                            <Link
-                                className="article-card-pinterest"
-                                to={'/error'}
-                            ></Link>
-                            <Link
-                                className="article-card-email"
-                                to={'/error'}
-                            ></Link>
+                            <Button
+                            onClick={() => {
+                                isLiked
+                                    ? dispatch(removeLike(article.id))
+                                    : dispatch(addLike(article.id))
+                                isLiked
+                                    ? dispatch(removeArticleFromFavorites(article.id))
+                                    : dispatch(addArticleToFavorites(null))
+                            }}
+                            className="article-card-likes"
+                        >
+                            {isLiked ? (
+                                <FavoriteIcon />
+                            ) : (
+                                <FavoriteBorderIcon />
+                            )}
+                        </Button>
+                            <Socials/>
                         </div>
                     </div>
                 </CardContent>

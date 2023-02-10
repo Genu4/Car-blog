@@ -10,6 +10,7 @@ import {
 } from 'redux/favoriteArticleReducer'
 
 import './ArticlesListItem.scss'
+import Socials from 'components/Socials/Socials'
 
 type Props = {
     id: number
@@ -43,7 +44,12 @@ const ArticlesListItem = ({
                     </Link>
                 </div>
                 <h2 className="article-card-title">
-                    <Link to={`/article/${id}`}>{title}</Link>
+                    <Link
+                        className="article-card-title-text"
+                        to={`/article/${id}`}
+                    >
+                        {title}
+                    </Link>
                 </h2>
                 <div className="article-autor-date">{author}</div>
                 <p className="article-short-content">{summary}</p>
@@ -54,7 +60,7 @@ const ArticlesListItem = ({
                 </div>
                 <div className="article-card-socials">
                     <div className="article-card-socials-block">
-                        <button
+                        <Button
                             onClick={() => {
                                 isLiked
                                     ? dispatch(removeLike(id))
@@ -70,23 +76,8 @@ const ArticlesListItem = ({
                             ) : (
                                 <FavoriteBorderIcon />
                             )}
-                        </button>
-                        <Link
-                            className="article-card-facebook"
-                            to={'/error'}
-                        ></Link>
-                        <Link
-                            className="article-card-twitter"
-                            to={'/error'}
-                        ></Link>
-                        <Link
-                            className="article-card-pinterest"
-                            to={'/error'}
-                        ></Link>
-                        <Link
-                            className="article-card-email"
-                            to={'/error'}
-                        ></Link>
+                        </Button>
+                        <Socials />
                     </div>
                 </div>
             </CardContent>

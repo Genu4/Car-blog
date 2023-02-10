@@ -1,6 +1,6 @@
 .article-card-item {
     background-color: #111111;
-    height: 600px;
+    height: fit-content;
 
     .article-card-category-block {
         margin-bottom: 20px;
@@ -30,7 +30,7 @@
         margin-bottom: 20px;
         text-align: center;
 
-        a {
+        .article-card-title-text {
             font-size: 16px;
             line-height: 22px;
             color: #ffffff;
@@ -40,7 +40,7 @@
         }
     }
 
-    .article-card-title:hover a {
+    .article-card-title:hover .article-card-title-text {
         color: #f57f17;
         cursor: pointer;
     }
@@ -85,62 +85,23 @@
     }
 
     .article-card-socials-block {
-        width: 200px;
+        width: 215px;
         margin: 0 auto;
         display: flex;
-        justify-content: space-around;
-    }
-
-    .article-card-likes,
-    .article-card-facebook,
-    .article-card-twitter,
-    .article-card-pinterest,
-    .article-card-email {
-        background-color: #111111;
-        padding: 0;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        width: fit-content;
-    }
-
-    a {
-        display: flex;
-        justify-content: center;
-        align-content: center;
+        justify-content: space-around;  
     }
 
     .article-card-likes {
-        width: 25px;
+        min-width: 25px;
         padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
+        border: none;
+        outline: none;
+        cursor: pointer;
         color: #f57f17;
+        background-color: #111111;
     }
 
-    .article-card-facebook::before {
-        content: '\f09a';
-        font-size: 25px;
-        font-family: FontAwesome;
-        color: #999999;
-    }
-    .article-card-twitter::before {
-        content: '\f099';
-        font-size: 25px;
-        font-family: FontAwesome;
-        color: #999999;
-    }
-    .article-card-pinterest::before {
-        content: '\f0d2';
-        font-size: 25px;
-        font-family: FontAwesome;
-        color: #999999;
-    }
-    .article-card-email::before {
-        content: '\f0e0';
-        font-size: 25px;
-        font-family: FontAwesome;
-        color: #999999;
-    }
 }
