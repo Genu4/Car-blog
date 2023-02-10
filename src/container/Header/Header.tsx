@@ -1,7 +1,8 @@
+import './Header.scss'
 import MobileHeader from './MobileHeader'
 import logo from './images/carbloglogo.png'
-import './Header.scss'
 import Menu from 'components/Menu/Menu'
+import { Link } from 'react-router-dom'
 
 
 
@@ -11,7 +12,7 @@ const Header = () => {
             <div className="container">
                 <div className="header">
                     <div className="header-logo">
-                        <img src={logo} alt="" />
+                        <Link to="/"><img src={logo} alt="" /></Link>
                     </div>
                     <Menu />
                     <div className="header-search">

@@ -1,3 +1,4 @@
+import './FavoriteArticlesListItem.scss'
 import { ArticlesProps } from 'components/Articles/articlesArray'
 import { Card, CardContent, Grid } from '@mui/material'
 import { Link } from 'react-router-dom'
@@ -6,8 +7,6 @@ import FavoriteIcon from '@mui/icons-material/Favorite'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { addLike, removeLike } from 'redux/likeReducer'
-
-import './FavoriteArticlesListItem.scss'
 import {
     addArticleToFavorites,
     removeArticleFromFavorites,

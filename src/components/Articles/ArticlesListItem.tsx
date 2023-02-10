@@ -1,3 +1,4 @@
+import './ArticlesListItem.scss'
 import { Button, Card, CardContent } from '@mui/material'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
@@ -8,8 +9,6 @@ import {
     addArticleToFavorites,
     removeArticleFromFavorites,
 } from 'redux/favoriteArticleReducer'
-
-import './ArticlesListItem.scss'
 import Socials from 'components/Socials/Socials'
 
 type Props = {
