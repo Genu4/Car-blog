@@ -1,7 +1,7 @@
 .article-content {
     color: white;
     padding: 20px 0;
-
+    
     .article-title {
         width: fit-content;
         margin: 0 auto 20px;
@@ -9,6 +9,7 @@
         letter-spacing: 1px;
         border-bottom: 1px solid #f57f17;
         font-weight: 700;
+        text-align: center;
     }
     .article-category-block {
         display: flex;
@@ -73,4 +74,12 @@
             margin-top: 10px;
         }
     }
+
+    
+}
+
+.article-content-socials {
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-end;
 }

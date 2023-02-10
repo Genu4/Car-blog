@@ -3,6 +3,7 @@ import articlesArray, {
     ArticlesProps,
 } from 'components/Articles/articlesArray'
 import Reviews from 'components/Reviews/Reviews'
+import Socials from 'components/Socials/Socials'
 import { Link, useParams } from 'react-router-dom'
 import './ArticlePage.scss'
 
@@ -51,6 +52,9 @@ const ArticlePage = (props: Props) => {
                         __html: articlesObject[parseInt(id!)].articleText,
                     }}
                 ></div>
+                <div className='article-content-socials'>
+                    <Socials />
+                </div>
             </div>
             <Reviews />
         </>

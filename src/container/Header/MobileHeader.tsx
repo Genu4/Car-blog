@@ -49,12 +49,30 @@ const MobileHeader = (props: Props) => {
                     </Button>
                 </div>
                 <div className="mobile-nav-socials">
-                    <Link className="mobile-nav-social fa-facebook" to={"/error"}></Link>
-                    <Link className="mobile-nav-social fa-twitter" to={"/error"}></Link>
-                    <Link className="mobile-nav-social fa-instagram" to={"/error"}></Link>
-                    <Link className="mobile-nav-social fa-pinterest" to={"/error"}></Link>
-                    <Link className="mobile-nav-social fa-youtube" to={"/error"}></Link>
-                    <Link className="mobile-nav-social fa-email" to={"/error"}></Link>
+                    <Link
+                        className="mobile-nav-social fa-facebook"
+                        to={'/error'}
+                    ></Link>
+                    <Link
+                        className="mobile-nav-social fa-twitter"
+                        to={'/error'}
+                    ></Link>
+                    <Link
+                        className="mobile-nav-social fa-instagram"
+                        to={'/error'}
+                    ></Link>
+                    <Link
+                        className="mobile-nav-social fa-pinterest"
+                        to={'/error'}
+                    ></Link>
+                    <Link
+                        className="mobile-nav-social fa-youtube"
+                        to={'/error'}
+                    ></Link>
+                    <Link
+                        className="mobile-nav-social fa-email"
+                        to={'/error'}
+                    ></Link>
                 </div>
                 <div className="line"></div>
                 <ul className="mobile-nav-list">
@@ -110,7 +128,13 @@ const MobileHeader = (props: Props) => {
                         ))}
                     </div>
                     <div className="mobile-logo">
-                        <img src={mobilelogo} alt="Logo" />
+                        <Link to="/">
+                            <img
+                                className="mobile-logo-img"
+                                src={mobilelogo}
+                                alt="Logo"
+                            />
+                        </Link>
                     </div>
                     <div className="mobile-header-search">
                         <div className="mobile-search-field-block">
