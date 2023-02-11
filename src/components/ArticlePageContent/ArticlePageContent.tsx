@@ -2,7 +2,7 @@ import './ArticlePageContent.scss'
 import { Button } from '@mui/material'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import articlesArray, {
     getArticlesObject,
     ArticlesProps,
@@ -28,16 +28,19 @@ const ArticlePageContent = () => {
     return (
         <>
             <div className="article-content">
-                <div>
+                <div className="article-title-block">
                     <p className="article-title">
                         {articlesObject[parseInt(id!)].title}
                     </p>
                 </div>
 
-                <div>
-                    <p className="article-category">
+                <div className='article-category-block'>
+                    <Link
+                        className="article-category"
+                        to={`/${articlesObject[parseInt(id!)].category}`}
+                    >
                         {articlesObject[parseInt(id!)].category}
-                    </p>
+                    </Link>
                 </div>
                 <div>
                     <p className="article-author">
@@ -56,7 +59,7 @@ const ArticlePageContent = () => {
                         __html: articlesObject[parseInt(id!)].articleText,
                     }}
                 ></div>
-                <div className='article-socials-block'>
+                <div className="article-socials-block">
                     <Button
                         className="article-likes"
                         onClick={() => {

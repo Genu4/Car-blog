@@ -55,7 +55,7 @@ const Comments = (props: Props) => {
             })
         }
     }
-    
+
     return (
         <div className="comments-block">
             <Typography variant="h4" className="article-comments-header">
@@ -77,29 +77,31 @@ const Comments = (props: Props) => {
                     </Card>
                 ))}
             </div>
-            <form onSubmit={handleSubmit}>
-                <h3 className="form-header">Please leave a comment</h3>
-                <div>
-                    <input
-                        className="commenter-name-field"
-                        type="text"
-                        placeholder="Your name..."
-                        value={newComment.name}
-                        onChange={handleName}
-                    />
-                </div>
-                <div>
-                    <textarea
-                        className="comment-text-field"
-                        placeholder="Leave a comment..."
-                        value={newComment.text}
-                        onChange={handleText}
-                    />
-                </div>
-                <Button type="submit" className="send-btn">
-                    Send
-                </Button>
-            </form>
+            <div className='form-block'>
+                <form onSubmit={handleSubmit}>
+                    <h3 className="form-header">Please leave a comment</h3>
+                    <div>
+                        <input
+                            className="commenter-name-field"
+                            type="text"
+                            placeholder="Your name..."
+                            value={newComment.name}
+                            onChange={handleName}
+                        />
+                    </div>
+                    <div>
+                        <textarea
+                            className="comment-text-field"
+                            placeholder="Leave a comment..."
+                            value={newComment.text}
+                            onChange={handleText}
+                        />
+                    </div>
+                    <Button type="submit" className="send-btn">
+                        Send
+                    </Button>
+                </form>
+            </div>
         </div>
     )
 }
