@@ -1,9 +1,9 @@
-import ArticlePageComponent from "components/ArticlePageContent/ArticlePageComponent"
+import ArticlePageContent from 'components/ArticlePageContent/ArticlePageContent'
 
 const ArticlePage = () => {
     return (
         <div>
-            <ArticlePageComponent />
+            <ArticlePageContent />
         </div>
     )
 }

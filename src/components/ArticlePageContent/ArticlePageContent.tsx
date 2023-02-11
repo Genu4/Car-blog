@@ -7,30 +7,42 @@ import articlesArray, {
     getArticlesObject,
     ArticlesProps,
 } from 'components/Articles/articlesArray'
-import { useAppSelector } from 'redux/hooks'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { addLike, removeLike } from 'redux/likeReducer'
+import {
+    addArticleToFavorites,
+    removeArticleFromFavorites,
+} from 'redux/favoriteArticleReducer'
 
 type ArticlesObject = {
     [id: number]: ArticlesProps
 }
 type Props = {
-    id?:number
+    id?: number
 }
 
 const ArticlePageContent = () => {
     const { id } = useParams()
     const articlesObject: ArticlesObject = getArticlesObject(articlesArray)
-    console.log(id)
-    console.log(typeof(parseInt(id!)))
     const isLiked = useAppSelector((state) => state.likeArticles[parseInt(id!)])
+    const dispatch = useAppDispatch()
+
     return (
-
-        
-
         <>
             <div>
-                <Button>
-                    {isLiked ? <FavoriteIcon/> : <FavoriteBorderIcon />}
-                    
+                <Button
+                    onClick={() => {
+                        isLiked
+                            ? dispatch(removeLike(parseInt(id!)))
+                            : dispatch(addLike(parseInt(id!)))
+                        isLiked
+                            ? dispatch(
+                                  removeArticleFromFavorites(parseInt(id!))
+                              )
+                            : dispatch(addArticleToFavorites({id}))
+                    }}
+                >
+                    {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
                 </Button>
             </div>
             <div className="article-content">
