@@ -1,7 +1,6 @@
 import './Menu.scss'
 import MenuItem from './MenuItem'
 import { useAppSelector } from 'redux/hooks'
-import { Link } from 'react-router-dom'
 
 const Menu = () => {
     const favoritesArticles = useAppSelector((state) => state.favoritesArticles)
