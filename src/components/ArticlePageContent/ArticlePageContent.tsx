@@ -18,9 +18,6 @@ import Socials from 'components/Socials/Socials'
 type ArticlesObject = {
     [id: number]: ArticlesProps
 }
-type Props = {
-    id?: number
-}
 
 const ArticlePageContent = () => {
     const { id } = useParams()
