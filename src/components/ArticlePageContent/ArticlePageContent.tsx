@@ -13,6 +13,7 @@ import {
     addArticleToFavorites,
     removeArticleFromFavorites,
 } from 'redux/favoriteArticleReducer'
+import Socials from 'components/Socials/Socials'
 
 type ArticlesObject = {
     [id: number]: ArticlesProps
@@ -29,22 +30,6 @@ const ArticlePageContent = () => {
 
     return (
         <>
-            <div>
-                <Button
-                    onClick={() => {
-                        isLiked
-                            ? dispatch(removeLike(parseInt(id!)))
-                            : dispatch(addLike(parseInt(id!)))
-                        isLiked
-                            ? dispatch(
-                                  removeArticleFromFavorites(parseInt(id!))
-                              )
-                            : dispatch(addArticleToFavorites({id}))
-                    }}
-                >
-                    {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
-                </Button>
-            </div>
             <div className="article-content">
                 <div>
                     <p className="article-title">
@@ -62,18 +47,36 @@ const ArticlePageContent = () => {
                         {articlesObject[parseInt(id!)].author}
                     </p>
                 </div>
-                {/* <div className="article-img-block">
+                <div className="article-img-block">
                     <img
                         className="article-img"
                         src={articlesObject[parseInt(id!)].image}
                         alt=""
                     />
-                </div> */}
-                {/* <div
+                </div>
+                <div
                     dangerouslySetInnerHTML={{
                         __html: articlesObject[parseInt(id!)].articleText,
                     }}
-                ></div> */}
+                ></div>
+                <div className='article-socials-block'>
+                    <Button
+                        className="article-likes"
+                        onClick={() => {
+                            isLiked
+                                ? dispatch(removeLike(parseInt(id!)))
+                                : dispatch(addLike(parseInt(id!)))
+                            isLiked
+                                ? dispatch(
+                                      removeArticleFromFavorites(parseInt(id!))
+                                  )
+                                : dispatch(addArticleToFavorites({ id }))
+                        }}
+                    >
+                        {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                    </Button>
+                    <Socials />
+                </div>
             </div>
         </>
     )

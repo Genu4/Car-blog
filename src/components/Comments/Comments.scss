@@ -1,28 +1,29 @@
-.reviews-block {
+.comments-block {
     height: fit-content;
     padding: 20px 0;
 
-    .article-reviews-header {
+    .article-comments-header {
         text-align: center;
         font-size: 22px;
         color: whitesmoke;
     }
 
-    .review-card {
+    .comment-card {
         margin-top: 10px;
         background-color: #111111;
         color: #999999;
     }
 
-    .reviewer-name {
+    .commenter-name {
         margin-bottom: 15px;
         display: flex;
         p {
             margin-left: 5px;
+            color: whitesmoke;
         }
     }
 
-    .review-text {
+    .comment-text {
         margin-bottom: 10px;
         display: flex;
         p {
@@ -35,7 +36,7 @@
         margin-bottom: 10px;
     }
 
-    .reviewer-name-field {
+    .commenter-name-field {
         margin-bottom: 10px;
         padding: 10px 20px;
         border: 1px solid #dedede;
@@ -44,7 +45,7 @@
         color: #f57f17;
     }
 
-    .reviewe-text-field {
+    .comment-text-field {
         height: 150px;
         margin-bottom: 10px;
         padding: 10px 20px;
@@ -53,6 +54,11 @@
         background: none;
         color: #f57f17;
         resize: none;
+    }
+
+    .commenter-name-field::placeholder,
+    .comment-text-field::placeholder {
+        font-size: 14px;
     }
 
     .send-btn {
@@ -69,19 +75,19 @@
 }
 
 @media (min-width: 768px) {
-    .reviewer-name-field {
+    .commenter-name-field {
         width: 30%;
     }
-    .reviewe-text-field {
+    .comment-text-field {
         width: 50%;
     }
 }
 
 @media (max-width: 767px) {
-    .reviewer-name-field {
+    .commenter-name-field {
         width: 100%;
     }
-    .reviewe-text-field {
+    .comment-text-field {
         width: 100%;
     }
 }

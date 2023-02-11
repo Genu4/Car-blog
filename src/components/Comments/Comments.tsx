@@ -1,16 +1,16 @@
 import { Button, Card, CardContent, Typography } from '@mui/material'
 import React, { useState } from 'react'
-import './Reviews.scss'
+import './Comments.scss'
 
 type Props = {}
 
-type Review = {
+type Comment = {
     name: string
     text: string
 }
 
-const Reviews = (props: Props) => {
-    const arrReviews: Review[] = [
+const Comments = (props: Props) => {
+    const arrComments: Comment[] = [
         {
             name: 'Jack Smith',
             text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore aspernatur consectetur aperiam quibusdam quisquam quia iure nam? Minus atque magni quis omnis et, sint pariatur. Atque amet quia accusamus tenetur.',
@@ -21,21 +21,21 @@ const Reviews = (props: Props) => {
         },
     ]
 
-    const [reviews, setReviews] = useState<Review[]>(arrReviews)
-    const [newReview, setNewReview] = useState<Review>({
+    const [Comments, setComments] = useState<Comment[]>(arrComments)
+    const [newComment, setNewComment] = useState<Comment>({
         name: '',
         text: '',
     })
 
     const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setNewReview((prevState: Review) => ({
+        setNewComment((prevState: Comment) => ({
             ...prevState,
             name: e.target.value,
         }))
     }
 
     const handleText = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setNewReview((prevState: Review) => ({
+        setNewComment((prevState: Comment) => ({
             ...prevState,
             text: e.target.value,
         }))
@@ -43,13 +43,13 @@ const Reviews = (props: Props) => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        if (newReview.name === '' || newReview.text === '') {
+        if (newComment.name === '' || newComment.text === '') {
             alert('All fields are requared')
         } else {
-            setReviews((prevState: Review[]) => {
-                return [...prevState, newReview]
+            setComments((prevState: Comment[]) => {
+                return [...prevState, newComment]
             })
-            setNewReview({
+            setNewComment({
                 name: '',
                 text: '',
             })
@@ -57,20 +57,20 @@ const Reviews = (props: Props) => {
     }
     
     return (
-        <div className="reviews-block">
-            <Typography variant="h4" className="article-reviews-header">
-                Reviews
+        <div className="comments-block">
+            <Typography variant="h4" className="article-comments-header">
+                Comments
             </Typography>
             <div>
-                {reviews.map(({ name, text }: Review, i) => (
-                    <Card className="review-card" variant="outlined" key={i}>
+                {Comments.map(({ name, text }: Comment, i) => (
+                    <Card className="comment-card" variant="outlined" key={i}>
                         <CardContent>
-                            <div className="reviewer-name">
+                            <div className="commenter-name">
                                 Name:
                                 <p>{name}</p>
                             </div>
-                            <div className="review-text">
-                                Review:
+                            <div className="commen-text">
+                                Comment:
                                 <p>{text}</p>
                             </div>
                         </CardContent>
@@ -78,21 +78,21 @@ const Reviews = (props: Props) => {
                 ))}
             </div>
             <form onSubmit={handleSubmit}>
-                <h3 className="form-header">Please leave a review</h3>
+                <h3 className="form-header">Please leave a comment</h3>
                 <div>
                     <input
-                        className="reviewer-name-field"
+                        className="commenter-name-field"
                         type="text"
                         placeholder="Your name..."
-                        value={newReview.name}
+                        value={newComment.name}
                         onChange={handleName}
                     />
                 </div>
                 <div>
                     <textarea
-                        className="reviewe-text-field"
-                        placeholder="Leave a review..."
-                        value={newReview.text}
+                        className="comment-text-field"
+                        placeholder="Leave a comment..."
+                        value={newComment.text}
                         onChange={handleText}
                     />
                 </div>
@@ -103,4 +103,4 @@ const Reviews = (props: Props) => {
         </div>
     )
 }
-export default Reviews
+export default Comments
