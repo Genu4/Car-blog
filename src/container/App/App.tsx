@@ -5,8 +5,6 @@ import Footer from 'container/Footer/Footer'
 import ScrollUpBtn from 'components/ScrollUpBtn/ScrollUpBtn'
 import ScrollToTop from 'components/ScrollToTop/ScrollToTop'
 
-
-
 const App = () => {
 
     return (

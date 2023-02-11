@@ -30,7 +30,7 @@ const ArticlesListItem = ({
     const isLiked = useAppSelector((state) => state.likeArticles[id])
 
     const dispatch = useAppDispatch()
-
+    
     return (
         <Card className="article-card-item">
             <CardContent>

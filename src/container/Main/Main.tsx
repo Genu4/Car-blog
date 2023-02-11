@@ -9,7 +9,6 @@ import { Route, Routes } from 'react-router-dom'
 import ArticlePage from 'pages/ArticlePage/ArticlePage'
 import Error from 'pages/Error/Error'
 
-
 const  Main = () => {
     return (
 

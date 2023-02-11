@@ -1,31 +1,10 @@
-import ArticlePageContent from 'components/ArticlePageContent/ArticlePageContent'
-import articlesArray, {
-    getArticlesObject,
-    ArticlesProps,
-} from 'components/Articles/articlesArray'
-import { useAppSelector } from 'redux/hooks'
+import ArticlePageComponent from "components/ArticlePageContent/ArticlePageComponent"
 
-type Props = {
-    articlesObject?: {
-        [id: number]: ArticlesProps
-    }
-
-    ArticlePageItem?: any
-}
-
-const ArticlePage = ({
-    articlesObject = getArticlesObject(articlesArray),
-    ArticlePageItem = ArticlePageContent,
-}: Props) => {
-    const favoritesArticles = useAppSelector((state) => state.favoritesArticles)
+const ArticlePage = () => {
     return (
-        <>
-            <ArticlePageItem
-                
-                favoritesArticles={favoritesArticles}
-                
-            />
-        </>
+        <div>
+            <ArticlePageComponent />
+        </div>
     )
 }
 export default ArticlePage
