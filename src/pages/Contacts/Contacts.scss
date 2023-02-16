@@ -65,6 +65,14 @@
     .text-area::placeholder {
         font-size: 14px;
     }
+
+    .form-send-btn {
+        margin-top: 20px;
+        border-radius: 0;
+        border: 1px solid rgba(153, 153, 153, 0.5);
+        outline: none;
+        color: #f57f17;
+    }
 }
 
 @media (min-width: 769px) {

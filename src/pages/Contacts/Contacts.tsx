@@ -1,3 +1,4 @@
+import { Button } from '@mui/material'
 import './Contacts.scss'
 
 type Props = {}
@@ -32,6 +33,7 @@ const Contacts = (props: Props) => {
                     <input className="input-field" type="text" placeholder='Subject'/>
                 </div>
                 <textarea className='text-area' name="" placeholder='Type your message...'></textarea>
+                <Button type="submit" className="form-send-btn">Send</Button>
             </form>
         </div>
     )
